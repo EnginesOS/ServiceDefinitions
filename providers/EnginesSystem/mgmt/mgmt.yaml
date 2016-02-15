@@ -1,0 +1,104 @@
+---
+type_path: mgmt
+publisher_namespace: EnginesSystem
+accepts: []
+author: Engines
+title: Management
+description: System  management
+major: 0
+minor: 0
+release_level: Alpha
+patch: 0
+service_container: auth
+service_handle_field: engine
+dedicated: false
+persistant: false
+immutable: false
+attach_post_build: true
+attach_requires_restart: false
+target_environment_variables: 
+consumer_params: {}
+type_consumer_params: {}
+configurators:
+  console_pass:
+    name: console_pass
+    label: Engines Console Login Password
+    description: Engines Login Password  for engines user
+    no_save: true
+    params:
+      console_pass:
+        name: console_pass
+        value: 
+        label: Password for engines user
+        field_type: text_field
+        select_collection: ''
+        tooltip: 'no : or #'
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ".*"
+        regex_invalid_message: wrong go back and try again
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+  ssh_master_key:
+    name: ssh_master_key
+    label: Engines access key
+    description: Engines access key
+    no_save: true
+    params:
+      ssh_master_key:
+        name: ssh_master_key
+        value: 
+        label: Password for engines user
+        field_type: text_field
+        select_collection: ''
+        tooltip: 'no : or #'
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ".*"
+        regex_invalid_message: wrong go back and try again
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+  hostname:
+    name: hostname
+    label: Engines hostname
+    description: Engines hostname
+    no_save: 
+    params:
+      hostname:
+        name: hostname
+        value: 
+        label: hostname
+        field_type: text_field
+        select_collection: ''
+        tooltip: 'no : or #'
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ".*"
+        regex_invalid_message: wrong go back and try again
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      domain_name:
+        name: domain_name
+        value: 
+        label: domain_name
+        field_type: text_field
+        select_collection: ''
+        tooltip: 'no : or #'
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ".*"
+        regex_invalid_message: wrong go back and try again
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false

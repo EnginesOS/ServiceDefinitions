@@ -1,0 +1,82 @@
+---
+type_path: email
+publisher_namespace: EnginesSystem
+accepts: []
+author: Engines
+title: Email
+description: Email server
+major: 0
+minor: 0
+release_level: Alpha
+patch: 0
+service_container: email
+service_handle_field: name
+dedicated: false
+persistant: true
+immutable: false
+attach_post_build: true
+attach_requires_restart: false
+target_environment_variables: 
+consumer_params:
+  email_address:
+    name: email_address
+    value: ''
+    label: Email Address
+    field_type: text_field
+    select_collection: ''
+    tooltip: Email Address name
+    hint: " "
+    placeholder: " "
+    comment: 
+    regex_validator: ".*"
+    regex_invalid_message: 
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
+type_consumer_params: {}
+configurators:
+  email_admin_secret:
+    name: email_admin_secret
+    label: Admin Secret
+    description: System Email Admin Accounts
+    no_save: true
+    params:
+      email_admin_secret:
+        name: email_admin_secret
+        value: 
+        label: Email System Config password
+        field_type: text_field
+        select_collection: ''
+        tooltip: Not saved
+        hint: ''
+        placeholder: 'Not saved '
+        comment: " "
+        regex_validator: ".*"
+        regex_invalid_message: wrong go back and try again
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+  default_domain:
+    name: default_domain
+    label: Default Domain
+    description: Default Domain
+    no_save: 
+    params:
+      default_domain:
+        name: default_domain
+        value: 
+        label: Default Domain
+        field_type: text_field
+        select_collection: ''
+        tooltip: " "
+        hint: default domain name
+        placeholder: " "
+        comment: " "
+        regex_validator: ".*"
+        regex_invalid_message: 
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false

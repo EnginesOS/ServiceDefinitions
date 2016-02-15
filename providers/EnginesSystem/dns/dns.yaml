@@ -1,0 +1,56 @@
+---
+type_path: dns
+publisher_namespace: EnginesSystem
+accepts:
+- ManagedEngine
+- ManagedService
+author: Engines
+title: DNS
+description: Resolves names to to IP address
+major: 0
+minor: 0
+release_level: Alpha
+patch: 0
+service_container: dns
+service_handle_field: hostname
+dedicated: false
+persistant: false
+immutable: true
+attach_post_build: true
+attach_requires_restart: false
+target_environment_variables: 
+consumer_params:
+  ip:
+    name: ip
+    value: " "
+    label: IP Address
+    field_type: text_field
+    select_collection: ''
+    tooltip: " "
+    hint: ip address
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: 
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  hostname:
+    name: hostname
+    value: " "
+    label: hostname
+    field_type: text_field
+    select_collection: ''
+    tooltip: " "
+    hint: hostname
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: 
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+type_consumer_params: {}
+configurators: {}
