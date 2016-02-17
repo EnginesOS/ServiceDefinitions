@@ -26,10 +26,10 @@ configurators:
     description: ''
     no_save: false
     params:
-      'access_id ':
-        name: 'access_id '
-        value: 'access_id '
-        label: 'access_id '
+      access_id:
+        name: access_id
+        value: access_id
+        label: access_id
         field_type: text
         select_collection: ''
         tooltip: ''
@@ -42,10 +42,10 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: true
-      'access_key ':
-        name: 'access_key '
-        value: 'access_key '
-        label: 'access_key '
+      access_key:
+        name: access_key
+        value: access_key
+        label: access_key
         field_type: text
         select_collection: ''
         tooltip: ''
