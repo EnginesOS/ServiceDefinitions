@@ -58,3 +58,19 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: true
+      collector_name:
+        name: collector_name
+        value: docker_stats
+        label: collector_name
+        field_type: text
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
