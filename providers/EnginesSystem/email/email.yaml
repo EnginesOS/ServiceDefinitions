@@ -42,16 +42,16 @@ configurators:
     description: System Email Admin Accounts
     no_save: true
     params:
-      email_admin_secret:
-        name: email_admin_secret
-        value: 
+      admin_secret:
+        name: admin_secret
+        value: ''
         label: Email System Config password
         field_type: text_field
         select_collection: ''
         tooltip: Not saved
         hint: ''
         placeholder: 'Not saved '
-        comment: " "
+        comment: ''
         regex_validator: ".*"
         regex_invalid_message: wrong go back and try again
         mandatory: true
