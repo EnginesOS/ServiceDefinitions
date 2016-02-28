@@ -149,7 +149,7 @@ consumer_params:
     immutable: true
   full_access:
     name: full_access
-    value: 'false'
+    value: '0'
     label: Full Database Server Access
     field_type: select_single
     select_collection: '[true, false, "grant"]'
@@ -158,7 +158,7 @@ consumer_params:
     placeholder: true|false
     comment: Access to all databases includes the ability to delete
     regex_validator: true|false
-    regex_invalid_message: ''
+    regex_invalid_message: 
     mandatory: true
     ask_at_build_time: false
     build_time_only: false
