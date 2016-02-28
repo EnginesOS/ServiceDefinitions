@@ -17,7 +17,7 @@ patch: 0
 service_container: backup
 service_handle_field: backup_name
 dedicated: false
-persistant: false
+persistent: false
 immutable: false
 attach_post_build: true
 attach_requires_restart: false
@@ -448,3 +448,10 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
+actionators:
+  download_backup_key.sh:
+    name: download_backup_key.sh
+    label: download_backup_key
+    description: download_backup_key
+    return_type: file
+    params: 
