@@ -6,7 +6,7 @@ accepts:
 - ManagedService
 author: Engines
 title: WWW Statistics
-description: 
+description: ''
 major: 0
 minor: 0
 release_level: Alpha
@@ -14,7 +14,7 @@ patch: 0
 service_container: wwwstats
 service_handle_field: fqdn
 dedicated: false
-persistant: false
+persistent: false
 immutable: false
 attach_post_build: true
 attach_requires_restart: false
@@ -38,3 +38,4 @@ consumer_params:
     immutable: false
 type_consumer_params: {}
 configurators: {}
+actionators: {}
