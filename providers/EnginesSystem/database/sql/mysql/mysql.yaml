@@ -14,7 +14,7 @@ patch: 0
 service_container: mysql_server
 service_handle_field: database_name
 dedicated: false
-persistant: true
+persistent: true
 immutable: false
 attach_post_build: false
 attach_requires_restart: false
@@ -187,3 +187,4 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
+actionators: {}
