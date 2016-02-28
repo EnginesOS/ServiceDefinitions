@@ -12,7 +12,7 @@ patch: 0
 service_container: dockerstats
 service_handle_field: dockerstats
 dedicated: false
-persistant: false
+persistent: false
 immutable: false
 attach_post_build: false
 attach_requires_restart: false
@@ -74,3 +74,4 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
+actionators: {}
