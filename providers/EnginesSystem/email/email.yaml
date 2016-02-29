@@ -12,7 +12,7 @@ patch: 0
 service_container: email
 service_handle_field: name
 dedicated: false
-persistant: true
+persistent: true
 immutable: false
 attach_post_build: true
 attach_requires_restart: false
@@ -44,14 +44,14 @@ configurators:
     params:
       email_admin_secret:
         name: email_admin_secret
-        value: 
+        value: ''
         label: Email System Config password
         field_type: text_field
         select_collection: ''
         tooltip: Not saved
         hint: ''
         placeholder: 'Not saved '
-        comment: " "
+        comment: ''
         regex_validator: ".*"
         regex_invalid_message: wrong go back and try again
         mandatory: true
@@ -80,3 +80,4 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
+actionators: {}

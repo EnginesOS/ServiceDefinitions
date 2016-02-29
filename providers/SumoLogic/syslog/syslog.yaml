@@ -60,10 +60,10 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-      syslog:
-        name: syslog
+      collector_name:
+        name: collector_name
         value: syslog
-        label: syslog
+        label: collector_name
         field_type: ''
         select_collection: ''
         tooltip: ''
