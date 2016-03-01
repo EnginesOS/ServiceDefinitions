@@ -449,16 +449,16 @@ configurators:
         build_time_only: false
         immutable: false
 actionators:
-  backup_public_key.pem:
-    name: backup_public_key.pem
-    label: backup_public_key.pem
-    description: backup_public_key.pem
+  public_key.pem:
+    name: public_key.pem
+    label: Download public key
+    description: "Public key of key used to sign backup\r\n"
     return_type: file
     params: 
-  backup_private_key.pem:
-    name: backup_private_key.pem
-    label: backup_private_key.pem
-    description: backup_private_key.pem
+  private_key.pem:
+    name: private_key.pem
+    label: Download private key
+    description: "Private key of key used to sign backup\r\n"
     return_type: file
     params: 
   display_backup_password:
