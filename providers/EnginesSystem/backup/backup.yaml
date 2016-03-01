@@ -449,21 +449,21 @@ configurators:
         build_time_only: false
         immutable: false
 actionators:
-  download_backup_public_key.sh:
-    name: download_backup_public_key.sh
-    label: download_backup_public_key.sh
-    description: download_backup_public_key.sh
+  backup_public_key.pem:
+    name: backup_public_key.pem
+    label: backup_public_key.pem
+    description: backup_public_key.pem
     return_type: file
     params: 
-  download_backup_private_key.sh:
-    name: download_backup_private_key.sh
-    label: download_backup_private_key.sh
-    description: download_backup_private_key.sh
+  backup_private_key.pem:
+    name: backup_private_key.pem
+    label: backup_private_key.pem
+    description: backup_private_key.pem
     return_type: file
     params: 
-  display_backup_password.sh:
-    name: display_backup_password.sh
-    label: display_backup_password.sh
-    description: display_backup_password.sh
+  display_backup_password:
+    name: display_backup_password
+    label: display_backup_password
+    description: display_backup_password
     return_type: plain_text
     params: 
