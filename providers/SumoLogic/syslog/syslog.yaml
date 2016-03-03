@@ -28,10 +28,10 @@ configurators:
     description: ''
     no_save: false
     params:
-      collector_id:
-        name: collector_id
+      access_id:
+        name: access_id
         value: ''
-        label: collector_id
+        label: access_id
         field_type: text
         select_collection: ''
         tooltip: ''
@@ -44,10 +44,10 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-      collector_key:
-        name: collector_key
+      access_key:
+        name: access_key
         value: ''
-        label: collector_key
+        label: access_key
         field_type: text
         select_collection: ''
         tooltip: ''
@@ -57,6 +57,22 @@ configurators:
         regex_validator: ''
         regex_invalid_message: ''
         mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      collector_name:
+        name: collector_name
+        value: syslog
+        label: collector_name
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
         ask_at_build_time: false
         build_time_only: false
         immutable: false

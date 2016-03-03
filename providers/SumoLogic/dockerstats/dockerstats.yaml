@@ -1,20 +1,18 @@
 ---
-type_path: wwwstats
+type_path: dockerstats
 publisher_namespace: SumoLogic
-accepts:
-- ManagedEngine
-- ManagedService
+accepts: []
 author: 
-title: Sumo Logic wwwstats
-description: ''
+title: docker_stats
+description: Docker statistics collector for engines
 major: 0
-minor: 0
+minor: 1
 release_level: Alpha
 patch: 0
-service_container: wwwstats
-service_handle_field: parent_engine
+service_container: dockerstats
+service_handle_field: dockerstats
 dedicated: false
-persistant: false
+persistent: false
 immutable: false
 attach_post_build: false
 attach_requires_restart: false
@@ -24,15 +22,15 @@ type_consumer_params: {}
 configurators:
   collector_credentials:
     name: collector_credentials
-    label: 'collector_credentials '
+    label: collector_credentials
     description: ''
     no_save: false
     params:
       access_id:
         name: access_id
-        value: ''
+        value: access_id
         label: access_id
-        field_type: ''
+        field_type: text
         select_collection: ''
         tooltip: ''
         hint: ''
@@ -40,13 +38,13 @@ configurators:
         comment: ''
         regex_validator: ''
         regex_invalid_message: ''
-        mandatory: true
+        mandatory: false
         ask_at_build_time: false
         build_time_only: false
-        immutable: false
+        immutable: true
       access_key:
         name: access_key
-        value: ''
+        value: access_key
         label: access_key
         field_type: text
         select_collection: ''
@@ -56,15 +54,15 @@ configurators:
         comment: ''
         regex_validator: ''
         regex_invalid_message: ''
-        mandatory: true
+        mandatory: false
         ask_at_build_time: false
         build_time_only: false
-        immutable: false
+        immutable: true
       collector_name:
         name: collector_name
-        value: wwwstats
+        value: docker_stats
         label: collector_name
-        field_type: ''
+        field_type: text
         select_collection: ''
         tooltip: ''
         hint: ''
@@ -76,3 +74,4 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
+actionators: {}
