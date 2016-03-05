@@ -50,7 +50,7 @@ consumer_params:
     immutable: false
   db_username:
     name: db_username
-    value: '_Engines_Builder(engine_name) '
+    value: _Engines_Builder(engine_name)
     label: DB User Name
     field_type: text_field
     select_collection: ''
@@ -66,7 +66,7 @@ consumer_params:
     immutable: false
   database_name:
     name: database_name
-    value: '_Engines_Builder(engine_name) '
+    value: _Engines_Builder(engine_name)
     label: Database name
     field_type: text_field
     select_collection: ''
