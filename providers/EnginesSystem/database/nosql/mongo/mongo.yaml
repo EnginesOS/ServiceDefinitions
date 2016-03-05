@@ -21,19 +21,19 @@ attach_requires_restart: false
 target_environment_variables:
   dbpasswd:
     environment_name: dbpasswd
-    variable_name: dbpassword
+    variable_name: db_password
   dbname:
     environment_name: dbname
     variable_name: database_name
   dbuser:
     environment_name: dbuser
-    variable_name: dbusername
+    variable_name: db_username
   dbhost:
     environment_name: dbhost
     variable_name: database_host
 consumer_params:
-  dbpassword:
-    name: dbpassword
+  db_password:
+    name: db_password
     value: _Engines_System(random(10))
     label: DB Password
     field_type: password_with_confirmation
@@ -48,8 +48,8 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: false
-  dbusername:
-    name: dbusername
+  db_username:
+    name: db_username
     value: '_Engines_Builder(engine_name) '
     label: DB User Name
     field_type: text_field
