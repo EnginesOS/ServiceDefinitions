@@ -14,22 +14,34 @@ patch: 0
 service_container: mongo_server
 service_handle_field: database_name
 dedicated: false
-persistant: true
+persistent: true
 immutable: true
 attach_post_build: false
 attach_requires_restart: false
-target_environment_variables: 
+target_environment_variables:
+  dbpasswd:
+    environment_name: dbpasswd
+    variable_name: dbpassword
+  dbname:
+    environment_name: dbname
+    variable_name: database_name
+  dbuser:
+    environment_name: dbuser
+    variable_name: dbusername
+  dbhost:
+    environment_name: dbhost
+    variable_name: database_host
 consumer_params:
   dbpassword:
     name: dbpassword
-    value: " "
+    value: _Engines_System(random(10))
     label: DB Password
     field_type: password_with_confirmation
     select_collection: ''
-    tooltip: " "
-    hint: " "
-    placeholder: " "
-    comment: " "
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
@@ -38,14 +50,14 @@ consumer_params:
     immutable: false
   dbusername:
     name: dbusername
-    value: " "
+    value: '_Engines_Builder(engine_name) '
     label: DB User Name
     field_type: text_field
     select_collection: ''
-    tooltip: " "
-    hint: " "
-    placeholder: " "
-    comment: " "
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
@@ -54,14 +66,14 @@ consumer_params:
     immutable: false
   database_name:
     name: database_name
-    value: " "
+    value: '_Engines_Builder(engine_name) '
     label: Database name
     field_type: text_field
     select_collection: ''
-    tooltip: " "
-    hint: " "
-    placeholder: " "
-    comment: " "
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
@@ -70,14 +82,14 @@ consumer_params:
     immutable: false
   database_host:
     name: database_host
-    value: " "
+    value: _Engines_System(mongo_host)
     label: database_host
     field_type: text_field
     select_collection: ''
     tooltip: Local or the ip address/hostname of the database server
-    hint: " "
-    placeholder: " "
-    comment: " "
+    hint: ''
+    placeholder: ''
+    comment: ''
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
@@ -86,3 +98,4 @@ consumer_params:
     immutable: false
 type_consumer_params: {}
 configurators: {}
+actionators: {}
