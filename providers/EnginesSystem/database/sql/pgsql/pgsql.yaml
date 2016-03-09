@@ -14,7 +14,7 @@ patch: 0
 service_container: pgsql_server
 service_handle_field: database_name
 dedicated: false
-persistant: true
+persistent: true
 immutable: false
 attach_post_build: true
 attach_requires_restart: false
@@ -163,6 +163,22 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: false
+  rails_flavor:
+    name: rails_flavor
+    value: postgresql
+    label: ''
+    field_type: ''
+    select_collection: ''
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: false
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
 type_consumer_params: {}
 configurators:
   db_master_pass:
@@ -187,3 +203,4 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
+service_actionators: {}
