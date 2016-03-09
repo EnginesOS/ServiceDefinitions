@@ -34,6 +34,9 @@ target_environment_variables:
   dbflavor:
     environment_name: dbflavor
     variable_name: db_flavor
+  rails_flavor:
+    environment_name: rails_flavor
+    variable_name: rails_flavor
 consumer_params:
   encoding:
     name: encoding
@@ -165,7 +168,7 @@ consumer_params:
     immutable: false
   rails_flavor:
     name: rails_flavor
-    value: postgresql
+    value: postgres
     label: ''
     field_type: ''
     select_collection: ''
