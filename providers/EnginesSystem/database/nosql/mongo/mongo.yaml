@@ -31,6 +31,9 @@ target_environment_variables:
   dbhost:
     environment_name: dbhost
     variable_name: database_host
+  rails_flavor:
+    environment_name: rails_flavor
+    variable_name: rails_flavor
 consumer_params:
   db_password:
     name: db_password
@@ -96,6 +99,22 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: false
+  rails_flavor:
+    name: rails_flavor
+    value: mongodb
+    label: ''
+    field_type: ''
+    select_collection: ''
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: false
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
 type_consumer_params: {}
 configurators: {}
-actionators: {}
+service_actionators: {}
