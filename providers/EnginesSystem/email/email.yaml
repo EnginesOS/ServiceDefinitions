@@ -80,4 +80,5 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-actionators: {}
+service_actionators: {}
+constants: {}
