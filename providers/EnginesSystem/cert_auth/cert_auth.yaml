@@ -12,7 +12,7 @@ patch: 0
 service_container: cert_auth
 service_handle_field: cert_name
 dedicated: false
-persistant: true
+persistent: true
 immutable: false
 attach_post_build: true
 attach_requires_restart: false
@@ -251,3 +251,5 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
+service_actionators: {}
+constants: {}
