@@ -12,7 +12,7 @@ patch: 0
 service_container: auth
 service_handle_field: engine
 dedicated: false
-persistant: true
+persistent: true
 immutable: false
 attach_post_build: false
 attach_requires_restart: false
@@ -84,3 +84,5 @@ consumer_params:
     immutable: false
 type_consumer_params: {}
 configurators: {}
+service_actionators: {}
+constants: {}
