@@ -14,7 +14,7 @@ patch: 0
 service_container: cron
 service_handle_field: title
 dedicated: false
-persistant: false
+persistent: false
 immutable: false
 attach_post_build: true
 attach_requires_restart: false
@@ -70,3 +70,5 @@ consumer_params:
     immutable: false
 type_consumer_params: {}
 configurators: {}
+service_actionators: {}
+constants: {}

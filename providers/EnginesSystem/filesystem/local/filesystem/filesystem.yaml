@@ -125,3 +125,4 @@ consumer_params:
 type_consumer_params: {}
 configurators: {}
 service_actionators: {}
+constants: {}

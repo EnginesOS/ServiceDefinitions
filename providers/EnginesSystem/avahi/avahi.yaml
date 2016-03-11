@@ -14,7 +14,7 @@ patch: 0
 service_container: avahi
 service_handle_field: hostname
 dedicated: false
-persistant: false
+persistent: false
 immutable: true
 attach_post_build: true
 attach_requires_restart: false
@@ -38,3 +38,5 @@ consumer_params:
     immutable: true
 type_consumer_params: {}
 configurators: {}
+service_actionators: {}
+constants: {}

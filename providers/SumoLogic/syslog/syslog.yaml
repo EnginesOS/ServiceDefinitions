@@ -14,7 +14,7 @@ patch: 0
 service_container: syslog
 service_handle_field: parent_engine
 dedicated: false
-persistant: true
+persistent: true
 immutable: false
 attach_post_build: false
 attach_requires_restart: false
@@ -76,3 +76,5 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
+service_actionators: {}
+constants: {}

@@ -207,3 +207,7 @@ configurators:
         build_time_only: false
         immutable: false
 service_actionators: {}
+constants:
+  rails_flavor:
+    name: rails_flavor
+    value: mysql2
