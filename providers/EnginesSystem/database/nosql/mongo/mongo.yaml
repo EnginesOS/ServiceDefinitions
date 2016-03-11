@@ -116,5 +116,28 @@ consumer_params:
     build_time_only: false
     immutable: true
 type_consumer_params: {}
-configurators: {}
+configurators:
+  Set admin password:
+    name: Set admin password
+    label: ''
+    description: ''
+    no_save: false
+    params:
+      " db_master_pass":
+        name: " db_master_pass"
+        value: ''
+        label: Admin password
+        field_type: password
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
 service_actionators: {}
+constants: {}
