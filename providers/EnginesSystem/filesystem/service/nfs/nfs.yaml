@@ -13,7 +13,7 @@ patch: 0
 service_container: nfs
 service_handle_field: name
 dedicated: false
-persistant: true
+persistent: true
 immutable: false
 attach_post_build: false
 attach_requires_restart: false
@@ -101,3 +101,5 @@ consumer_params:
     immutable: false
 type_consumer_params: {}
 configurators: {}
+service_actionators: {}
+constants: {}
