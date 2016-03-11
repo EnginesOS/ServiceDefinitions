@@ -7,6 +7,7 @@ accepts:
 - filesystem/local/filesystem
 - database/sql/mysql
 - database/sql/pgsql
+- database/nosql/mongo/
 author: Engines
 title: Backup
 description: Backup tasks
@@ -448,22 +449,29 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-actionators:
+service_actionators:
   public_key.pem:
     name: public_key.pem
     label: Download public key
     description: "Public key of key used to sign backup\r\n"
+    log: 
     return_type: file
+    return_file_name: 
     params: 
   private_key.pem:
     name: private_key.pem
     label: Download private key
     description: "Private key of key used to sign backup\r\n"
-    return_type: file
+    log: 
+    return_type: File
+    return_file_name: 
     params: 
   display_backup_password:
     name: display_backup_password
     label: display_backup_password
     description: display_backup_password
+    log: 
     return_type: plain_text
+    return_file_name: 
     params: 
+constants: {}
