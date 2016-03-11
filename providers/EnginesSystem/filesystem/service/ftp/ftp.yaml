@@ -13,7 +13,7 @@ patch: 0
 service_container: ftp
 service_handle_field: username
 dedicated: false
-persistant: true
+persistent: true
 immutable: false
 attach_post_build: true
 attach_requires_restart: false
@@ -117,3 +117,5 @@ consumer_params:
     immutable: true
 type_consumer_params: {}
 configurators: {}
+service_actionators: {}
+constants: {}

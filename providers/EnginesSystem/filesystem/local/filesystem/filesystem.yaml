@@ -14,7 +14,7 @@ patch: 0
 service_container: volmanager
 service_handle_field: service_name
 dedicated: false
-persistant: true
+persistent: true
 immutable: false
 attach_post_build: true
 attach_requires_restart: true
@@ -124,3 +124,5 @@ consumer_params:
     immutable: true
 type_consumer_params: {}
 configurators: {}
+service_actionators: {}
+constants: {}

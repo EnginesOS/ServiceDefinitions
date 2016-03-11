@@ -34,6 +34,9 @@ target_environment_variables:
   dbflavor:
     environment_name: dbflavor
     variable_name: db_flavor
+  rails_flavor:
+    environment_name: rails_flavor
+    variable_name: rails_flavor
 consumer_params:
   collation:
     name: collation
@@ -163,6 +166,22 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: false
+  rails_flavor:
+    name: rails_flavor
+    value: mysql2
+    label: ''
+    field_type: ''
+    select_collection: ''
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: false
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
 type_consumer_params: {}
 configurators:
   db_master_pass:
@@ -187,4 +206,8 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-actionators: {}
+service_actionators: {}
+constants:
+  rails_flavor:
+    name: rails_flavor
+    value: mysql2

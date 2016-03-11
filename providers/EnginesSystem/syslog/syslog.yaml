@@ -36,4 +36,5 @@ consumer_params:
     immutable: false
 type_consumer_params: {}
 configurators: {}
-actionators: {}
+service_actionators: {}
+constants: {}
