@@ -117,14 +117,14 @@ consumer_params:
     immutable: true
 type_consumer_params: {}
 configurators:
-  Set admin password:
-    name: Set admin password
-    label: ''
+  set_admin_password:
+    name: set_admin_password
+    label: Set admin password
     description: ''
     no_save: false
     params:
-      " db_master_pass":
-        name: " db_master_pass"
+      db_master_pass:
+        name: db_master_pass
         value: ''
         label: Admin password
         field_type: password
