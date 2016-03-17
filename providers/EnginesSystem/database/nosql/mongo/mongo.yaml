@@ -121,7 +121,7 @@ configurators:
     name: db_master_pass
     label: Set admin password
     description: ''
-    no_save: false
+    no_save: true
     params:
       db_master_pass:
         name: db_master_pass
