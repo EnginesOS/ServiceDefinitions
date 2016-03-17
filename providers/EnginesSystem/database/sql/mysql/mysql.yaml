@@ -211,3 +211,6 @@ constants:
   rails_flavor:
     name: rails_flavor
     value: mysql2
+  backup_support:
+    name: backup_support
+    value: 'true'

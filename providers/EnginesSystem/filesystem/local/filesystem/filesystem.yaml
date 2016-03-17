@@ -125,4 +125,7 @@ consumer_params:
 type_consumer_params: {}
 configurators: {}
 service_actionators: {}
-constants: {}
+constants:
+  backup_support:
+    name: backup_support
+    value: 'true'
