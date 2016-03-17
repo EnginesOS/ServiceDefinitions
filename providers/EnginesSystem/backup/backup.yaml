@@ -188,7 +188,7 @@ type_consumer_params:
   ManagedEngine:
     src_type:
       name: src_type
-      value: engine
+      value: engine_and_data
       label: src_type
       field_type: collection
       select_collection: engine_and_data, engine_only
@@ -363,16 +363,16 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-      include_databases:
-        name: include_databases
-        value: 
-        label: Backup Databases
+      include_services:
+        name: include_services
+        value: ''
+        label: Backup Services
         field_type: select
         select_collection: "[true, false]"
-        tooltip: " "
+        tooltip: ''
         hint: ''
-        placeholder: 'a label '
-        comment: " "
+        placeholder: ''
+        comment: File system and logs backed up seperately
         regex_validator: ".*"
         regex_invalid_message: wrong go back and try again
         mandatory: true
