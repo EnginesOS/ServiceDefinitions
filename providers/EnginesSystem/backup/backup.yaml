@@ -168,6 +168,22 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: true
+  backup_type:
+    name: backup_type
+    value: full
+    label: Backup Type
+    field_type: collection
+    select_collection: full,incremental
+    tooltip: incremental only valid for filesystem
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
 type_consumer_params:
   ManagedEngine:
     src_type:
