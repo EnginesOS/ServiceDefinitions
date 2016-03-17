@@ -190,8 +190,8 @@ type_consumer_params:
       name: src_type
       value: engine
       label: src_type
-      field_type: hidden
-      select_collection: ''
+      field_type: collection
+      select_collection: engine_and_data, engine_only
       tooltip: ''
       hint: ''
       placeholder: ''
