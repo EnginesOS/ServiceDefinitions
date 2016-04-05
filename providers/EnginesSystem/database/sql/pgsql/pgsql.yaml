@@ -38,118 +38,6 @@ target_environment_variables:
     environment_name: rails_flavor
     variable_name: rails_flavor
 consumer_params:
-  encoding:
-    name: encoding
-    value: ascii
-    label: DB encoding
-    field_type: select_single
-    select_collection: '["utf8", "ascii"]'
-    tooltip: " "
-    hint: " "
-    placeholder: " "
-    comment: " defaults to acsii"
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: true
-  collation:
-    name: collation
-    value: C
-    label: DB Collation
-    field_type: select_single
-    select_collection: '["C", "en_GB"]'
-    tooltip: " "
-    hint: " "
-    placeholder: " "
-    comment: " defaults to C"
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: true
-  dbpassword:
-    name: dbpassword
-    value: _Engines_System(random(10))
-    label: DB Password
-    field_type: password_with_confirmation
-    select_collection: ''
-    tooltip: " "
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: true
-  db_flavor:
-    name: db_flavor
-    value: pgsql
-    label: DB db_flavor
-    field_type: text_field
-    select_collection: ''
-    tooltip: " "
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: true
-  dbusername:
-    name: dbusername
-    value: _Engines_Builder(engine_name)
-    label: DB User Name
-    field_type: text_field
-    select_collection: ''
-    tooltip: " "
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: true
-  database_name:
-    name: database_name
-    value: _Engines_Builder(engine_name)
-    label: Database name
-    field_type: text_field
-    select_collection: ''
-    tooltip: " "
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: true
-  database_host:
-    name: database_host
-    value: _Engines_System(pgsql_host)
-    label: database_host
-    field_type: text_field
-    select_collection: ''
-    tooltip: Local or the ip address/hostname of the database server
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: true
   full_access:
     name: full_access
     value: '0'
@@ -179,6 +67,118 @@ consumer_params:
     regex_validator: ''
     regex_invalid_message: ''
     mandatory: false
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  database_host:
+    name: database_host
+    value: _Engines_System(pgsql_host)
+    label: database_host
+    field_type: text_field
+    select_collection: ''
+    tooltip: Local or the ip address/hostname of the database server
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  database_name:
+    name: database_name
+    value: _Engines_Builder(engine_name)
+    label: Database name
+    field_type: text_field
+    select_collection: ''
+    tooltip: " "
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  dbusername:
+    name: dbusername
+    value: _Engines_Builder(engine_name)
+    label: DB User Name
+    field_type: text_field
+    select_collection: ''
+    tooltip: " "
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  db_flavor:
+    name: db_flavor
+    value: pgsql
+    label: DB db_flavor
+    field_type: text_field
+    select_collection: ''
+    tooltip: " "
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  collation:
+    name: collation
+    value: C
+    label: DB Collation
+    field_type: select_single
+    select_collection: '["C", "en_GB"]'
+    tooltip: " "
+    hint: " "
+    placeholder: " "
+    comment: " defaults to C"
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  encoding:
+    name: encoding
+    value: ascii
+    label: DB encoding
+    field_type: select_single
+    select_collection: '["utf8", "ascii"]'
+    tooltip: " "
+    hint: " "
+    placeholder: " "
+    comment: " defaults to acsii"
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  dbpassword:
+    name: dbpassword
+    value: _Engines_System(random(10))
+    label: DB Password
+    field_type: password_with_confirmation
+    select_collection: ''
+    tooltip: " "
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
     ask_at_build_time: false
     build_time_only: false
     immutable: true
