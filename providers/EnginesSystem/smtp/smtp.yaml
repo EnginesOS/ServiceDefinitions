@@ -48,13 +48,13 @@ configurators:
         label: Smart host port
         field_type: text_field
         select_collection: ''
-        tooltip: " "
+        tooltip: ''
         hint: '25 or 587 '
         placeholder: 'port number '
-        comment: " "
+        comment: ''
         regex_validator: "[0-9]*"
-        regex_invalid_message: 
-        mandatory: true
+        regex_invalid_message: ''
+        mandatory: false
         ask_at_build_time: false
         build_time_only: false
         immutable: false
@@ -64,13 +64,13 @@ configurators:
         label: Smart host Name
         field_type: text_field
         select_collection: ''
-        tooltip: " "
+        tooltip: ''
         hint: 'smtp-host.domain.com '
         placeholder: 'host name or address '
-        comment: " "
+        comment: ''
         regex_validator: ".*"
-        regex_invalid_message: 
-        mandatory: true
+        regex_invalid_message: ''
+        mandatory: false
         ask_at_build_time: false
         build_time_only: false
         immutable: false
@@ -125,6 +125,22 @@ configurators:
         regex_validator: ".*"
         regex_invalid_message: 
         mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      deliver_local:
+        name: deliver_local
+        value: 'false'
+        label: Deliver Locally
+        field_type: boolean
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
         ask_at_build_time: false
         build_time_only: false
         immutable: false
