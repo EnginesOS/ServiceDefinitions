@@ -26,50 +26,18 @@ configurators:
     description: Configure Smarthost settings
     no_save: 
     params:
-      auth_type:
-        name: auth_type
-        value: none
-        label: Authenication with Smart host
-        field_type: select_single
-        select_collection: '["none", "plaintext", "md5"]'
+      smart_host_passwd:
+        name: smart_host_passwd
+        value: 
+        label: Password for Smart host authentication
+        field_type: password
+        select_collection: ''
         tooltip: " "
-        hint: engine
-        placeholder: " "
+        hint: password
+        placeholder: password
         comment: " "
         regex_validator: ".*"
         regex_invalid_message: 
-        mandatory: true
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
-      smart_host_port:
-        name: smart_host_port
-        value: '25'
-        label: Smart host port
-        field_type: text_field
-        select_collection: ''
-        tooltip: ''
-        hint: '25 or 587 '
-        placeholder: 'port number '
-        comment: ''
-        regex_validator: "[0-9]*"
-        regex_invalid_message: ''
-        mandatory: false
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
-      smart_hostname:
-        name: smart_hostname
-        value: ''
-        label: Smart host Name
-        field_type: text_field
-        select_collection: ''
-        tooltip: ''
-        hint: 'smtp-host.domain.com '
-        placeholder: 'host name or address '
-        comment: ''
-        regex_validator: ".*"
-        regex_invalid_message: ''
         mandatory: false
         ask_at_build_time: false
         build_time_only: false
@@ -90,18 +58,50 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-      smart_host_passwd:
-        name: smart_host_passwd
-        value: 
-        label: Password for Smart host authentication
-        field_type: password
-        select_collection: ''
+      auth_type:
+        name: auth_type
+        value: none
+        label: Authenication with Smart host
+        field_type: select_single
+        select_collection: '["none", "plaintext", "md5"]'
         tooltip: " "
-        hint: password
-        placeholder: password
+        hint: engine
+        placeholder: " "
         comment: " "
         regex_validator: ".*"
         regex_invalid_message: 
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      smart_hostname:
+        name: smart_hostname
+        value: ''
+        label: Smart host Name
+        field_type: text_field
+        select_collection: ''
+        tooltip: ''
+        hint: 'smtp-host.domain.com '
+        placeholder: 'host name or address '
+        comment: ''
+        regex_validator: ".*"
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      smart_host_port:
+        name: smart_host_port
+        value: '25'
+        label: Smart host port
+        field_type: text_field
+        select_collection: ''
+        tooltip: ''
+        hint: '25 or 587 '
+        placeholder: 'port number '
+        comment: ''
+        regex_validator: "[0-9]*"
+        regex_invalid_message: ''
         mandatory: false
         ask_at_build_time: false
         build_time_only: false
