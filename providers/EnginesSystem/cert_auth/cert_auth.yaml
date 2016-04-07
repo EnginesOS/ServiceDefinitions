@@ -18,6 +18,22 @@ attach_post_build: true
 attach_requires_restart: false
 target_environment_variables: 
 consumer_params:
+  cert_name:
+    name: cert_name
+    value: ''
+    label: cert name name
+    field_type: text_field
+    select_collection: ''
+    tooltip: Cert name usually domainname
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
   domainname:
     name: domainname
     value: ''
@@ -50,6 +66,38 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: false
+  country:
+    name: country
+    value: ''
+    label: Country
+    field_type: text_field
+    select_collection: ''
+    tooltip: 2 Character Country Code
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".2"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
+  state:
+    name: state
+    value: ''
+    label: State
+    field_type: text_field
+    select_collection: ''
+    tooltip: State
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
   organisation:
     name: organisation
     value: ''
@@ -73,54 +121,6 @@ consumer_params:
     field_type: text_field
     select_collection: ''
     tooltip: City/Location
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: false
-  state:
-    name: state
-    value: ''
-    label: State
-    field_type: text_field
-    select_collection: ''
-    tooltip: State
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: false
-  country:
-    name: country
-    value: ''
-    label: Country
-    field_type: text_field
-    select_collection: ''
-    tooltip: 2 Character Country Code
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".2"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: false
-  cert_name:
-    name: cert_name
-    value: ''
-    label: cert name name
-    field_type: text_field
-    select_collection: ''
-    tooltip: Cert name usually domainname
     hint: " "
     placeholder: " "
     comment: " "

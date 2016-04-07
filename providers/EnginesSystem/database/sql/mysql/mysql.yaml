@@ -38,6 +38,54 @@ target_environment_variables:
     environment_name: rails_flavor
     variable_name: rails_flavor
 consumer_params:
+  full_access:
+    name: full_access
+    value: 'false'
+    label: Full Database Server Access
+    field_type: select_single
+    select_collection: '[true, false, "grant"]'
+    tooltip: Access to all databases includes the ability to delete
+    hint: true|false
+    placeholder: true|false
+    comment: Access to all databases includes the ability to delete
+    regex_validator: true|false
+    regex_invalid_message: ''
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
+  name:
+    name: name
+    value: _Engines_Builder(engine_name)
+    label: service tag name
+    field_type: text_field
+    select_collection: ''
+    tooltip: service tag name
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  database_host:
+    name: database_host
+    value: _Engines_System(mysql_host)
+    label: database_host
+    field_type: text_field
+    select_collection: ''
+    tooltip: Local or the ip address/hostname of the database server
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
   collation:
     name: collation
     value: utf8_general_ci
@@ -118,54 +166,6 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: true
-  database_host:
-    name: database_host
-    value: _Engines_System(mysql_host)
-    label: database_host
-    field_type: text_field
-    select_collection: ''
-    tooltip: Local or the ip address/hostname of the database server
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: true
-  name:
-    name: name
-    value: _Engines_Builder(engine_name)
-    label: service tag name
-    field_type: text_field
-    select_collection: ''
-    tooltip: service tag name
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: true
-  full_access:
-    name: full_access
-    value: 'false'
-    label: Full Database Server Access
-    field_type: select_single
-    select_collection: '[true, false, "grant"]'
-    tooltip: Access to all databases includes the ability to delete
-    hint: true|false
-    placeholder: true|false
-    comment: Access to all databases includes the ability to delete
-    regex_validator: true|false
-    regex_invalid_message: ''
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: false
   rails_flavor:
     name: rails_flavor
     value: mysql2
