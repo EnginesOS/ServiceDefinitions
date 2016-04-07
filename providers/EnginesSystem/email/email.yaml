@@ -182,6 +182,76 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
+  grey_listing:
+    name: grey_listing
+    label: Grey Listing
+    description: ''
+    no_save: false
+    params:
+      enable_grey_listing:
+        name: enable_grey_listing
+        value: 'false'
+        label: Enable
+        field_type: boolean
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      grey_list_delay:
+        name: grey_list_delay
+        value: '120'
+        label: delay
+        field_type: ''
+        select_collection: ''
+        tooltip: Delay between first contact and accepting email in seconds
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      whitelist_clients:
+        name: whitelist_clients
+        value: ''
+        label: 'White Listed Clients '
+        field_type: text
+        select_collection: ''
+        tooltip: List of Addresses or hostnames
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      whitelist_addresses:
+        name: whitelist_addresses
+        value: ''
+        label: White Listed Adresses
+        field_type: text
+        select_collection: ''
+        tooltip: List of email adresses
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
 service_actionators: {}
 constants:
   backup_support:
