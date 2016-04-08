@@ -224,7 +224,7 @@ configurators:
         name: whitelist_clients
         value: ''
         label: 'White Listed Clients '
-        field_type: text
+        field_type: text_area
         select_collection: ''
         tooltip: List of Addresses or hostnames
         hint: ''
@@ -240,7 +240,7 @@ configurators:
         name: whitelist_addresses
         value: ''
         label: White Listed Adresses
-        field_type: text
+        field_type: text_box
         select_collection: ''
         tooltip: List of email adresses
         hint: ''
