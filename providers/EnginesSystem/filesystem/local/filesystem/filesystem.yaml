@@ -76,20 +76,20 @@ consumer_params:
     immutable: true
   volume_src:
     name: volume_src
-    value: " "
+    value: ''
     label: volume src path
     field_type: text_field
     select_collection: ''
-    tooltip: " "
-    hint: " "
-    placeholder: " "
-    comment: " "
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
     regex_validator: ".*"
-    regex_invalid_message: 
+    regex_invalid_message: ''
     mandatory: false
     ask_at_build_time: false
     build_time_only: false
-    immutable: true
+    immutable: false
   engine_path:
     name: engine_path
     value: " "
