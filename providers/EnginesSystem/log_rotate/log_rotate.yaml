@@ -12,7 +12,7 @@ minor: 1
 release_level: Beta
 patch: 0
 service_container: log_rotate
-service_handle_field: log_rotate
+service_handle_field: log_name
 dedicated: false
 persistent: true
 immutable: true
@@ -68,6 +68,22 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: false
+  log_name:
+    name: log_name
+    value: ''
+    label: Log Name
+    field_type: text
+    select_collection: ''
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
 type_consumer_params: {}
 configurators:
   defaults:
