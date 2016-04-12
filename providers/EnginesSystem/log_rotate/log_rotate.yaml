@@ -1,7 +1,9 @@
 ---
 type_path: log_rotate
 publisher_namespace: EnginesSystem
-accepts: []
+accepts:
+- ManagedEngine
+- ManagedService
 author: 
 title: log rotation
 description: rotates the logs and keeps compressed backups
@@ -9,8 +11,8 @@ major: 0
 minor: 1
 release_level: Beta
 patch: 0
-service_container: logrotate
-service_handle_field: logrotate
+service_container: log_rotate
+service_handle_field: log_rotate
 dedicated: false
 persistent: true
 immutable: true
