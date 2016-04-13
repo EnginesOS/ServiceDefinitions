@@ -41,7 +41,7 @@ consumer_params:
     value: weekly
     label: Cycle
     field_type: 'collection '
-    select_collection: daily,weekly,monthly
+    select_collection: daily weekly monthly
     tooltip: ''
     hint: ''
     placeholder: ''
