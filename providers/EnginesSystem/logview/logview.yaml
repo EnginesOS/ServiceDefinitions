@@ -14,7 +14,7 @@ patch: 0
 service_container: logview
 service_handle_field: log_name
 dedicated: false
-persistent: true
+persistent: false
 immutable: false
 attach_post_build: false
 attach_requires_restart: false
