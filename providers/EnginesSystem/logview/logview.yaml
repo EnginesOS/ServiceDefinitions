@@ -57,9 +57,9 @@ consumer_params:
     value: raw
     label: log type
     field_type: collection
-    select_collection: nginx apache raw syslog
+    select_collection: nginx apache raw syslog nginx_error_log apache_error_log raw_dated
     tooltip: ''
-    hint: ''
+    hint: nginx apache raw syslog nginx_error_log apache_error_log raw_dated
     placeholder: ''
     comment: ''
     regex_validator: ''
