@@ -240,7 +240,7 @@ configurators:
         name: whitelist_addresses
         value: ''
         label: White Listed Adresses
-        field_type: text_box
+        field_type: text_area
         select_collection: ''
         tooltip: List of email adresses
         hint: ''
