@@ -1,15 +1,15 @@
 ---
-type_path: mgmt
+type_path: firstrun
 publisher_namespace: EnginesSystem
 accepts: []
 author: 
-title: Management GUI
-description: ''
+title: First Run Wizard
+description: First Run Wizard
 major: 0
 minor: 1
 release_level: Alpha
 patch: 0
-service_container: mgmt
+service_container: firstrun
 service_handle_field: ''
 dedicated: false
 persistent: false
