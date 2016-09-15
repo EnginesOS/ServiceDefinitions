@@ -5,7 +5,7 @@ accepts:
 - ManagedEngine
 - ManagedService
 author: Engines
-title: PqSQL Database
+title: PgSQL Database
 description: 'Postgres SQL Database '
 major: 0
 minor: 0
