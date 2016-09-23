@@ -5,8 +5,8 @@ accepts:
 - ManagedEngine
 - ManagedService
 author: Engines
-title: PgMySQL Database
-description: 'PgMySQL Database '
+title: PgSQL Database
+description: 'Postgres SQL Database '
 major: 0
 minor: 0
 release_level: Alpha
