@@ -54,9 +54,9 @@ consumer_params:
     immutable: true
 type_consumer_params: {}
 configurators:
-  DNS Forwarders:
-    name: DNS Forwarders
-    label: DNS Forwarders
+  dns_forwarders:
+    name: dns_forwarders
+    label: dns_forwarders
     description: ''
     no_save: false
     params:
@@ -64,6 +64,22 @@ configurators:
         name: dns_server
         value: ''
         label: Upstream DNS
+        field_type: text
+        select_collection: ''
+        tooltip: ''
+        hint: 'IP address x.x.x.x '
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      dns_server2:
+        name: dns_server2
+        value: ''
+        label: 2nd Upstream DNS
         field_type: text
         select_collection: ''
         tooltip: ''
