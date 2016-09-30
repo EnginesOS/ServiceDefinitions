@@ -12,7 +12,7 @@ patch: 0
 service_container: auth
 service_handle_field: engine
 dedicated: false
-persistent: false
+persistent: true
 immutable: false
 attach_post_build: false
 attach_requires_restart: false
