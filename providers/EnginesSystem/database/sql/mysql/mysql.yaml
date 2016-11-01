@@ -128,8 +128,8 @@ consumer_params:
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
-    ask_at_build_time: false
-    build_time_only: true
+    ask_at_build_time: true
+    build_time_only: false
     immutable: true
   db_username:
     name: db_username
