@@ -34,9 +34,6 @@ target_environment_variables:
   dbflavor:
     environment_name: dbflavor
     variable_name: db_flavor
-  rails_flavor:
-    environment_name: rails_flavor
-    variable_name: rails_flavor
 consumer_params:
   full_access:
     name: full_access
@@ -61,13 +58,13 @@ consumer_params:
     field_type: text_field
     select_collection: ''
     tooltip: service tag name
-    hint: " "
-    placeholder: " "
-    comment: " "
+    hint: ''
+    placeholder: ''
+    comment: ''
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
-    ask_at_build_time: false
+    ask_at_build_time: true
     build_time_only: false
     immutable: true
   database_host:
@@ -99,7 +96,7 @@ consumer_params:
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
-    ask_at_build_time: false
+    ask_at_build_time: true
     build_time_only: false
     immutable: true
   db_flavor:
@@ -124,15 +121,15 @@ consumer_params:
     label: DB Password
     field_type: password_with_confirmation
     select_collection: ''
-    tooltip: " "
-    hint: " "
-    placeholder: " "
-    comment: " "
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
     ask_at_build_time: false
-    build_time_only: false
+    build_time_only: true
     immutable: true
   db_username:
     name: db_username
@@ -140,14 +137,14 @@ consumer_params:
     label: DB User Name
     field_type: text_field
     select_collection: ''
-    tooltip: " "
-    hint: " "
-    placeholder: " "
-    comment: " "
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
-    ask_at_build_time: false
+    ask_at_build_time: true
     build_time_only: false
     immutable: true
   database_name:
@@ -156,30 +153,14 @@ consumer_params:
     label: Database name
     field_type: text_field
     select_collection: ''
-    tooltip: " "
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: true
-  rails_flavor:
-    name: rails_flavor
-    value: mysql2
-    label: ''
-    field_type: ''
-    select_collection: ''
     tooltip: ''
     hint: ''
     placeholder: ''
     comment: ''
-    regex_validator: ''
-    regex_invalid_message: ''
-    mandatory: false
-    ask_at_build_time: false
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: true
     build_time_only: false
     immutable: true
 type_consumer_params: {}
