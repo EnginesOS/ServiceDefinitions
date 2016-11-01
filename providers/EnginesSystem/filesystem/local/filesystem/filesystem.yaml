@@ -65,13 +65,13 @@ consumer_params:
     field_type: text_field
     select_collection: ''
     tooltip: service tag name
-    hint: " "
-    placeholder: " "
-    comment: " "
+    hint: ''
+    placeholder: ''
+    comment: ''
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
-    ask_at_build_time: false
+    ask_at_build_time: true
     build_time_only: false
     immutable: true
   volume_src:
