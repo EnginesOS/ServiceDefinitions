@@ -36,6 +36,22 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: false
+  cron_job:
+    name: cron_job
+    value: ''
+    label: Cron line
+    field_type: text_field
+    select_collection: ''
+    tooltip: ''
+    hint: the command
+    placeholder: ''
+    comment: ''
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
   title:
     name: title
     value: 
@@ -52,18 +68,18 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: false
-  cron_job:
-    name: cron_job
-    value: 
-    label: Cron line
-    field_type: text_field
+  when:
+    name: when
+    value: ''
+    label: Cron when specification
+    field_type: ''
     select_collection: ''
-    tooltip: " "
-    hint: "* * * * * command"
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
     mandatory: true
     ask_at_build_time: false
     build_time_only: false
