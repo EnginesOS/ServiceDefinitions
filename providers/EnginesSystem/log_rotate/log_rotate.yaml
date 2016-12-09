@@ -8,8 +8,8 @@ author:
 title: log rotation
 description: rotates the logs and keeps compressed backups
 major: 0
-minor: 1
-release_level: Beta
+minor: 0
+release_level: Alpha
 patch: 0
 service_container: log_rotate
 service_handle_field: log_name
@@ -20,6 +20,22 @@ attach_post_build: true
 attach_requires_restart: false
 target_environment_variables: 
 consumer_params:
+  log_name:
+    name: log_name
+    value: ''
+    label: Log Name
+    field_type: text
+    select_collection: ''
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
   log_file_path:
     name: log_file_path
     value: ''
@@ -68,22 +84,6 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: false
-  log_name:
-    name: log_name
-    value: ''
-    label: Log Name
-    field_type: text
-    select_collection: ''
-    tooltip: ''
-    hint: ''
-    placeholder: ''
-    comment: ''
-    regex_validator: ''
-    regex_invalid_message: ''
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: true
 type_consumer_params: {}
 configurators:
   defaults:

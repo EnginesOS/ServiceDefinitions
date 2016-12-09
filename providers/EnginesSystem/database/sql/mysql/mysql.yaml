@@ -35,6 +35,54 @@ target_environment_variables:
     environment_name: dbflavor
     variable_name: db_flavor
 consumer_params:
+  db_flavor:
+    name: db_flavor
+    value: mysql2
+    label: DB db_flavor
+    field_type: text_field
+    select_collection: ''
+    tooltip: " "
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  db_password:
+    name: db_password
+    value: _Engines_System(random(10))
+    label: DB Password
+    field_type: password_with_confirmation
+    select_collection: ''
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: true
+    build_time_only: false
+    immutable: true
+  collation:
+    name: collation
+    value: utf8_general_ci
+    label: DB collation
+    field_type: select_single
+    select_collection: '["utf8_general_ci", "ascii","utf8mb4_general_ci"]'
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: true
+    build_time_only: false
+    immutable: true
   full_access:
     name: full_access
     value: 'false'
@@ -81,54 +129,6 @@ consumer_params:
     regex_invalid_message: wrong go back and try again
     mandatory: true
     ask_at_build_time: false
-    build_time_only: false
-    immutable: true
-  collation:
-    name: collation
-    value: utf8_general_ci
-    label: DB collation
-    field_type: select_single
-    select_collection: '["utf8_general_ci", "ascii","utf8mb4_general_ci"]'
-    tooltip: ''
-    hint: ''
-    placeholder: ''
-    comment: ''
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: true
-    build_time_only: false
-    immutable: true
-  db_flavor:
-    name: db_flavor
-    value: mysql2
-    label: DB db_flavor
-    field_type: text_field
-    select_collection: ''
-    tooltip: " "
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: true
-  db_password:
-    name: db_password
-    value: _Engines_System(random(10))
-    label: DB Password
-    field_type: password_with_confirmation
-    select_collection: ''
-    tooltip: ''
-    hint: ''
-    placeholder: ''
-    comment: ''
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: true
     build_time_only: false
     immutable: true
   db_username:

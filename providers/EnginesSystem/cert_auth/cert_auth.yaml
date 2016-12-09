@@ -18,54 +18,6 @@ attach_post_build: true
 attach_requires_restart: false
 target_environment_variables: 
 consumer_params:
-  cert_name:
-    name: cert_name
-    value: ''
-    label: cert name name
-    field_type: text_field
-    select_collection: ''
-    tooltip: Cert name usually domainname
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: false
-  domainname:
-    name: domainname
-    value: ''
-    label: domainname
-    field_type: text_field
-    select_collection: ''
-    tooltip: domainname or CN
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: false
-  person:
-    name: person
-    value: ''
-    label: person
-    field_type: text_field
-    select_collection: ''
-    tooltip: person/OU
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: false
   country:
     name: country
     value: ''
@@ -130,6 +82,54 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: false
+  person:
+    name: person
+    value: ''
+    label: person
+    field_type: text_field
+    select_collection: ''
+    tooltip: person/OU
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
+  cert_name:
+    name: cert_name
+    value: ''
+    label: cert name name
+    field_type: text_field
+    select_collection: ''
+    tooltip: Cert name usually domainname
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
+  domainname:
+    name: domainname
+    value: ''
+    label: domainname
+    field_type: text_field
+    select_collection: ''
+    tooltip: domainname or CN
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
 type_consumer_params: {}
 configurators:
   system_ca:
@@ -139,6 +139,22 @@ configurators:
       engines host
     no_save: true
     params:
+      cert_name:
+        name: cert_name
+        value: ''
+        label: cert name name
+        field_type: text_field
+        select_collection: ''
+        tooltip: Cert name usually domainname
+        hint: " "
+        placeholder: " "
+        comment: " "
+        regex_validator: ".*"
+        regex_invalid_message: wrong go back and try again
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
       domainname:
         name: domainname
         value: ''
@@ -230,22 +246,6 @@ configurators:
         placeholder: " "
         comment: " "
         regex_validator: ".2"
-        regex_invalid_message: wrong go back and try again
-        mandatory: true
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
-      cert_name:
-        name: cert_name
-        value: ''
-        label: cert name name
-        field_type: text_field
-        select_collection: ''
-        tooltip: Cert name usually domainname
-        hint: " "
-        placeholder: " "
-        comment: " "
-        regex_validator: ".*"
         regex_invalid_message: wrong go back and try again
         mandatory: true
         ask_at_build_time: false
