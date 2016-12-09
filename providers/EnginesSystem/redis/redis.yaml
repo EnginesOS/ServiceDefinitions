@@ -7,7 +7,7 @@ author:
 title: redis
 description: ''
 major: 0
-minor: 1
+minor: 0
 release_level: Alpha
 patch: 0
 service_container: redis
