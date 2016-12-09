@@ -8,8 +8,8 @@ author:
 title: Log View
 description: ''
 major: 0
-minor: 1
-release_level: Beta
+minor: 0
+release_level: Alpha
 patch: 0
 service_container: logview
 service_handle_field: log_name
