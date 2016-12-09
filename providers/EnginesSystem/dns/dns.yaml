@@ -20,22 +20,6 @@ attach_post_build: true
 attach_requires_restart: false
 target_environment_variables: 
 consumer_params:
-  ip:
-    name: ip
-    value: " "
-    label: IP Address
-    field_type: text_field
-    select_collection: ''
-    tooltip: " "
-    hint: ip address
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: 
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: true
   hostname:
     name: hostname
     value: " "
@@ -52,6 +36,22 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: true
+  ip:
+    name: ip
+    value: " "
+    label: IP Address
+    field_type: text_field
+    select_collection: ''
+    tooltip: " "
+    hint: ip address
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: 
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
 type_consumer_params: {}
 configurators:
   dns_forwarders:
@@ -60,22 +60,6 @@ configurators:
     description: ''
     no_save: false
     params:
-      dns_server:
-        name: dns_server
-        value: ''
-        label: Upstream DNS
-        field_type: text
-        select_collection: ''
-        tooltip: ''
-        hint: 'IP address x.x.x.x '
-        placeholder: ''
-        comment: ''
-        regex_validator: ''
-        regex_invalid_message: ''
-        mandatory: false
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
       dns_server2:
         name: dns_server2
         value: ''
@@ -84,6 +68,22 @@ configurators:
         select_collection: ''
         tooltip: ''
         hint: IP address x.x.x.x
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      dns_server:
+        name: dns_server
+        value: ''
+        label: Upstream DNS
+        field_type: text
+        select_collection: ''
+        tooltip: ''
+        hint: 'IP address x.x.x.x '
         placeholder: ''
         comment: ''
         regex_validator: ''
