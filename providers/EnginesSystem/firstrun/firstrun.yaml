@@ -6,7 +6,7 @@ author:
 title: First Run Wizard
 description: First Run Wizard
 major: 0
-minor: 1
+minor: 0
 release_level: Alpha
 patch: 0
 service_container: firstrun
