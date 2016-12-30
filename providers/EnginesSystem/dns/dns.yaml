@@ -52,6 +52,22 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: true
+  ip_type:
+    name: ip_type
+    value: ''
+    label: ip_type
+    field_type: text
+    select_collection: ''
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: false
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
 type_consumer_params: {}
 configurators:
   dns_forwarders:
