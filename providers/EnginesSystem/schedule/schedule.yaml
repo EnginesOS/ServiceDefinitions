@@ -25,7 +25,7 @@ consumer_params:
     value: schedule
     label: ''
     field_type: ''
-    select_collection: "[schedule, sheduled_action]"
+    select_collection: ''
     tooltip: ''
     hint: ''
     placeholder: ''
@@ -55,7 +55,7 @@ consumer_params:
   title:
     name: title
     value: ''
-    label: ''
+    label: Title
     field_type: text_field
     select_collection: ''
     tooltip: ''
