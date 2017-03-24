@@ -20,8 +20,8 @@ target_environment_variables:
 consumer_params: {}
 type_consumer_params: {}
 configurators:
-  set_password:
-    name: set_password
+  password:
+    name: password
     label: Set web admin password
     description: ''
     no_save: true
