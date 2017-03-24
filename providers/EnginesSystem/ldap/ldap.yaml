@@ -19,6 +19,28 @@ attach_requires_restart: false
 target_environment_variables: 
 consumer_params: {}
 type_consumer_params: {}
-configurators: {}
+configurators:
+  set_password:
+    name: set_password
+    label: Set web admin password
+    description: ''
+    no_save: true
+    params:
+      password:
+        name: password
+        value: ''
+        label: Password
+        field_type: password
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
 service_actionators: {}
 constants: {}
