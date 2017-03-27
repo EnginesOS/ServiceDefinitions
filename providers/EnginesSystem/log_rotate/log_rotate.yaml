@@ -12,7 +12,7 @@ minor: 0
 release_level: Alpha
 patch: 0
 service_container: log_rotate
-service_handle_field: log_name
+service_handle_field: log_file_path
 dedicated: false
 persistent: true
 immutable: true
