@@ -1,0 +1,88 @@
+---
+type_path: vpn/ivpn
+publisher_namespace: EnginesSystem
+accepts: []
+author: 
+title: Ipsec VPN
+description: ''
+major: 0
+minor: 0
+release_level: Alpha
+patch: 0
+service_container: ivpn
+service_handle_field: vpn_name
+dedicated: false
+persistent: false
+immutable: false
+attach_post_build: false
+attach_requires_restart: false
+target_environment_variables: 
+consumer_params: {}
+type_consumer_params: {}
+configurators: {}
+service_actionators:
+  add_user_vpn:
+    name: add_user_vpn
+    label: Add VPN User
+    description: ''
+    log: false
+    return_type: plain_text
+    return_file_name: 
+    params:
+      vpn_name:
+        name: vpn_name
+        value: ''
+        label: User name
+        field_type: text
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: true
+      password:
+        name: password
+        value: ''
+        label: Password
+        field_type: password
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+  rm_user_vpn:
+    name: rm_user_vpn
+    label: Remove VPN User
+    description: ''
+    log: false
+    return_type: plain_text
+    return_file_name: 
+    params:
+      vpn_name:
+        name: vpn_name
+        value: ''
+        label: Username
+        field_type: text
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+constants: {}
