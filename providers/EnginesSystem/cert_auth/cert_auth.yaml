@@ -251,7 +251,79 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-service_actionators: {}
+service_actionators:
+  fetch_cert:
+    name: fetch_cert
+    label: fetch_cert
+    description: ''
+    log: false
+    return_type: plain_text
+    return_file_name: 
+    params: 
+  import_cert:
+    name: import_cert
+    label: import_cert
+    description: ''
+    log: false
+    return_type: none
+    return_file_name: 
+    params:
+      cert:
+        name: cert
+        value: ''
+        label: ''
+        field_type: text_field
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      key:
+        name: key
+        value: ''
+        label: ''
+        field_type: text_field
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+  list_certs:
+    name: list_certs
+    label: list_certs
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params: 
+  remove_cert:
+    name: remove_cert
+    label: remove_cert
+    description: ''
+    log: false
+    return_type: none
+    return_file_name: 
+    params: 
+  system_ca:
+    name: system_ca
+    label: system_ca
+    description: ''
+    log: false
+    return_type: plain_text
+    return_file_name: 
+    params: 
 constants:
   backup_support:
     name: backup_support
