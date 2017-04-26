@@ -121,15 +121,47 @@ consumer_params:
     field_type: text_field
     select_collection: ''
     tooltip: domainname or CN
-    hint: " "
-    placeholder: " "
-    comment: " "
+    hint: ''
+    placeholder: ''
+    comment: ''
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
-    ask_at_build_time: false
+    ask_at_build_time: true
     build_time_only: false
     immutable: false
+  hostname:
+    name: hostname
+    value: ''
+    label: ''
+    field_type: ''
+    select_collection: ''
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: false
+    ask_at_build_time: true
+    build_time_only: false
+    immutable: false
+  alt_names:
+    name: alt_names
+    value: ''
+    label: Alterntive names
+    field_type: ''
+    select_collection: ''
+    tooltip: 'space seperated list of hostnames '
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: false
+    ask_at_build_time: true
+    build_time_only: false
+    immutable: true
 type_consumer_params: {}
 configurators:
   system_ca:
