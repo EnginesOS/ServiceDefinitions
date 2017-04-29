@@ -19,32 +19,13 @@ attach_requires_restart: false
 target_environment_variables: 
 consumer_params: {}
 type_consumer_params: {}
-configurators: {}
-service_actionators:
+configurators:
   add_user_vpn:
     name: add_user_vpn
-    label: Add VPN User
+    label: Add User VPN
     description: ''
-    log: false
-    return_type: plain_text
-    return_file_name: 
+    no_save: false
     params:
-      vpn_name:
-        name: vpn_name
-        value: ''
-        label: User name
-        field_type: text
-        select_collection: ''
-        tooltip: ''
-        hint: ''
-        placeholder: ''
-        comment: ''
-        regex_validator: ''
-        regex_invalid_message: ''
-        mandatory: true
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: true
       password:
         name: password
         value: ''
@@ -58,22 +39,14 @@ service_actionators:
         regex_validator: ''
         regex_invalid_message: ''
         mandatory: true
-        ask_at_build_time: false
+        ask_at_build_time: true
         build_time_only: false
         immutable: false
-  rm_user_vpn:
-    name: rm_user_vpn
-    label: Remove VPN User
-    description: ''
-    log: false
-    return_type: plain_text
-    return_file_name: 
-    params:
       vpn_name:
         name: vpn_name
         value: ''
         label: Username
-        field_type: text
+        field_type: ''
         select_collection: ''
         tooltip: ''
         hint: ''
@@ -82,7 +55,122 @@ service_actionators:
         regex_validator: ''
         regex_invalid_message: ''
         mandatory: true
-        ask_at_build_time: false
+        ask_at_build_time: true
+        build_time_only: false
+        immutable: true
+  rm_user_vpn:
+    name: rm_user_vpn
+    label: Remove User VPN
+    description: ''
+    no_save: false
+    params:
+      vpn_name:
+        name: vpn_name
+        value: ''
+        label: Username
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: true
         build_time_only: false
         immutable: false
+  add_site_vpn:
+    name: add_site_vpn
+    label: Add Site to Site VPN
+    description: ''
+    no_save: false
+    params:
+      remote_address:
+        name: remote_address
+        value: ''
+        label: Remote Address
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: true
+        build_time_only: false
+        immutable: false
+      remote_subnet:
+        name: remote_subnet
+        value: ''
+        label: Remote subnet
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: true
+        build_time_only: false
+        immutable: false
+      remote_certificate:
+        name: remote_certificate
+        value: ''
+        label: Remote Certificate
+        field_type: text_field
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: true
+        build_time_only: false
+        immutable: false
+      vpn_name:
+        name: vpn_name
+        value: ''
+        label: VPN_name
+        field_type: ''
+        select_collection: ''
+        tooltip: a-Z no spaces
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: true
+        build_time_only: false
+        immutable: false
+  rm_site_vpn:
+    name: rm_site_vpn
+    label: remove Site VPN
+    description: ''
+    no_save: false
+    params:
+      vpn_name:
+        name: vpn_name
+        value: ''
+        label: VPN Name
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: true
+        build_time_only: false
+        immutable: false
+service_actionators: {}
 constants: {}

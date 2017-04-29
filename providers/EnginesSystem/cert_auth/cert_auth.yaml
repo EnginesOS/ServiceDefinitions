@@ -291,7 +291,23 @@ service_actionators:
     log: false
     return_type: plain_text
     return_file_name: 
-    params: 
+    params:
+      cert_name:
+        name: cert_name
+        value: ''
+        label: Certificate name
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: true
+        build_time_only: false
+        immutable: false
   import_cert:
     name: import_cert
     label: import_cert
@@ -347,7 +363,23 @@ service_actionators:
     log: false
     return_type: none
     return_file_name: 
-    params: 
+    params:
+      cert_name:
+        name: cert_name
+        value: ''
+        label: Certificate name
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: true
+        immutable: false
   system_ca:
     name: system_ca
     label: system_ca
