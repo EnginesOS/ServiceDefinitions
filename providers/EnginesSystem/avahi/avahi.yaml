@@ -38,16 +38,16 @@ consumer_params:
     immutable: true
 type_consumer_params: {}
 configurators:
-  default_domain:
-    name: default_domain
-    label: default_domain
-    description: default_domain
+  default_mdns_domain:
+    name: default_mdns_domain
+    label: default_mdns_domain
+    description: default_mdns_domain
     no_save: false
     params:
-      default_domain:
-        name: default_domain
+      default_mdns_domain:
+        name: default_mdns_domain
         value: engines.local
-        label: default_domain
+        label: default_mdns_domain
         field_type: ''
         select_collection: ''
         tooltip: ''
