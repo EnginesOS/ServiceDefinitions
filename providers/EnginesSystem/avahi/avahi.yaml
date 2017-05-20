@@ -37,6 +37,28 @@ consumer_params:
     build_time_only: false
     immutable: true
 type_consumer_params: {}
-configurators: {}
+configurators:
+  default_domain:
+    name: default_domain
+    label: default_domain
+    description: default_domain
+    no_save: false
+    params:
+      default_domain:
+        name: default_domain
+        value: engines.local
+        label: default_domain
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
 service_actionators: {}
 constants: {}
