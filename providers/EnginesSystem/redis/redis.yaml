@@ -24,8 +24,8 @@ target_environment_variables:
   port:
     environment_name: port
     variable_name: port
-  hosstname:
-    environment_name: hosstname
+  redis_hostname:
+    environment_name: redis_hostname
     variable_name: hostname
 consumer_params:
   password:
