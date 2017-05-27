@@ -13,7 +13,7 @@ patch: 0
 service_container: redis
 service_handle_field: redis-host
 dedicated: false
-persistent: false
+persistent: true
 immutable: false
 attach_post_build: false
 attach_requires_restart: false
