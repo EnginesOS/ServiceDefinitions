@@ -11,7 +11,7 @@ minor: 0
 release_level: Alpha
 patch: 0
 service_container: redis
-service_handle_field: redis-host
+service_handle_field: port
 dedicated: false
 persistent: true
 immutable: false
