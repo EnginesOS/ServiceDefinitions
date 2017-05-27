@@ -12,16 +12,57 @@ release_level: Alpha
 patch: 0
 service_container: redis
 service_handle_field: redis-host
-dedicated: true
-persistent: true
+dedicated: false
+persistent: false
 immutable: false
 attach_post_build: false
 attach_requires_restart: false
-target_environment_variables: 
+target_environment_variables:
+  password:
+    environment_name: password
+    variable_name: password
+  port:
+    environment_name: port
+    variable_name: port
+  hosstname:
+    environment_name: hosstname
+    variable_name: hostname
 consumer_params:
-  redis-host:
-    name: redis-host
-    value: " _Engines_Builder(engine_name)-redis.engines.internal"
+  password:
+    name: password
+    value: " _Engines_Builder(random(16))"
+    label: password
+    field_type: ''
+    select_collection: ''
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: false
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  port:
+    name: port
+    value: _Engines_System(service_resource(redis,next_port))
+    label: port
+    field_type: ''
+    select_collection: ''
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: false
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  hostname:
+    name: hostname
+    value: redis._Engines_System(internal_domain)
     label: ''
     field_type: ''
     select_collection: ''
