@@ -6,7 +6,7 @@ accepts:
 - ManagedService
 author: Engines
 title: Cron
-description: Scheduales tasks
+description: Scheduled tasks
 major: 0
 minor: 0
 release_level: Alpha
