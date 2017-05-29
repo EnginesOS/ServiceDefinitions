@@ -18,11 +18,11 @@ immutable: false
 attach_post_build: false
 attach_requires_restart: false
 target_environment_variables:
-  password:
-    environment_name: password
+  redis_password:
+    environment_name: redis_password
     variable_name: password
-  port:
-    environment_name: port
+  redis_port:
+    environment_name: redis_port
     variable_name: port
   redis_hostname:
     environment_name: redis_hostname
