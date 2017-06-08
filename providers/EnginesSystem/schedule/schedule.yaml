@@ -33,7 +33,7 @@ consumer_params:
     regex_validator: ''
     regex_invalid_message: ''
     mandatory: true
-    ask_at_build_time: false
+    ask_at_build_time: true
     build_time_only: false
     immutable: true
   cron_job:
