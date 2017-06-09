@@ -13,19 +13,19 @@ patch: 0
 service_container: redis
 service_handle_field: port
 dedicated: false
-persistent: true
+persistent: false
 immutable: false
 attach_post_build: false
 attach_requires_restart: false
 target_environment_variables:
-  password:
-    environment_name: password
+  redis_password:
+    environment_name: redis_password
     variable_name: password
-  port:
-    environment_name: port
+  redis_port:
+    environment_name: redis_port
     variable_name: port
-  hosstname:
-    environment_name: hosstname
+  redis_hostname:
+    environment_name: redis_hostname
     variable_name: hostname
 consumer_params:
   password:
