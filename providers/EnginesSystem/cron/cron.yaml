@@ -6,7 +6,7 @@ accepts:
 - ManagedService
 author: Engines
 title: Cron
-description: Scheduled tasks
+description: Scheduales tasks
 major: 0
 minor: 0
 release_level: Alpha
@@ -36,22 +36,6 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: false
-  cron_job:
-    name: cron_job
-    value: ''
-    label: Cron line
-    field_type: text_field
-    select_collection: ''
-    tooltip: ''
-    hint: the command
-    placeholder: ''
-    comment: ''
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: false
   title:
     name: title
     value: 
@@ -68,18 +52,18 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: false
-  when:
-    name: when
-    value: ''
-    label: Cron when specification
-    field_type: ''
+  cron_job:
+    name: cron_job
+    value: 
+    label: Cron line
+    field_type: text_field
     select_collection: ''
-    tooltip: ''
-    hint: ''
-    placeholder: ''
-    comment: ''
-    regex_validator: ''
-    regex_invalid_message: ''
+    tooltip: " "
+    hint: "* * * * * command"
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
     mandatory: true
     ask_at_build_time: false
     build_time_only: false

@@ -5,8 +5,8 @@ accepts:
 - ManagedEngine
 - ManagedService
 author: Engines
-title: PgSQL Database
-description: 'Postgres SQL Database '
+title: PgMySQL Database
+description: 'PgMySQL Database '
 major: 0
 minor: 0
 release_level: Alpha
@@ -38,54 +38,6 @@ target_environment_variables:
     environment_name: rails_flavor
     variable_name: rails_flavor
 consumer_params:
-  collation:
-    name: collation
-    value: C
-    label: DB Collation
-    field_type: select_single
-    select_collection: '["C", "en_GB"]'
-    tooltip: " "
-    hint: " "
-    placeholder: " "
-    comment: " defaults to C"
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: true
-  encoding:
-    name: encoding
-    value: ascii
-    label: DB encoding
-    field_type: select_single
-    select_collection: '["utf8", "ascii"]'
-    tooltip: " "
-    hint: " "
-    placeholder: " "
-    comment: " defaults to acsii"
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: true
-  dbpassword:
-    name: dbpassword
-    value: _Engines_System(random(10))
-    label: DB Password
-    field_type: password_with_confirmation
-    select_collection: ''
-    tooltip: " "
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: true
   full_access:
     name: full_access
     value: '0'
@@ -150,6 +102,22 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: true
+  dbusername:
+    name: dbusername
+    value: _Engines_Builder(engine_name)
+    label: DB User Name
+    field_type: text_field
+    select_collection: ''
+    tooltip: " "
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
   db_flavor:
     name: db_flavor
     value: pgsql
@@ -166,11 +134,43 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: true
-  dbusername:
-    name: dbusername
-    value: _Engines_Builder(engine_name)
-    label: DB User Name
-    field_type: text_field
+  collation:
+    name: collation
+    value: C
+    label: DB Collation
+    field_type: select_single
+    select_collection: '["C", "en_GB"]'
+    tooltip: " "
+    hint: " "
+    placeholder: " "
+    comment: " defaults to C"
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  encoding:
+    name: encoding
+    value: ascii
+    label: DB encoding
+    field_type: select_single
+    select_collection: '["utf8", "ascii"]'
+    tooltip: " "
+    hint: " "
+    placeholder: " "
+    comment: " defaults to acsii"
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  dbpassword:
+    name: dbpassword
+    value: _Engines_System(random(10))
+    label: DB Password
+    field_type: password_with_confirmation
     select_collection: ''
     tooltip: " "
     hint: " "
