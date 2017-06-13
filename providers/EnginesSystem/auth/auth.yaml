@@ -18,29 +18,13 @@ attach_post_build: false
 attach_requires_restart: false
 target_environment_variables: 
 consumer_params:
-  service:
-    name: service
-    value: ''
-    label: service
+  engine:
+    name: engine
+    value: _Builder(engine_name)
+    label: User name
     field_type: text_field
     select_collection: ''
-    tooltip: service
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: false
-  command:
-    name: command
-    value: ''
-    label: command
-    field_type: text_field
-    select_collection: ''
-    tooltip: service
+    tooltip: User name
     hint: " "
     placeholder: " "
     comment: " "
@@ -66,13 +50,29 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: false
-  engine:
-    name: engine
-    value: _Builder(engine_name)
-    label: User name
+  command:
+    name: command
+    value: ''
+    label: command
     field_type: text_field
     select_collection: ''
-    tooltip: User name
+    tooltip: service
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
+  service:
+    name: service
+    value: ''
+    label: service
+    field_type: text_field
+    select_collection: ''
+    tooltip: service
     hint: " "
     placeholder: " "
     comment: " "
