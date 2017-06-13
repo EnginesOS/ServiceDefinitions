@@ -20,22 +20,6 @@ attach_post_build: true
 attach_requires_restart: false
 target_environment_variables: 
 consumer_params:
-  ip:
-    name: ip
-    value: " "
-    label: IP Address
-    field_type: text_field
-    select_collection: ''
-    tooltip: " "
-    hint: ip address
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: 
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: true
   hostname:
     name: hostname
     value: " "
@@ -52,7 +36,77 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: true
+  ip:
+    name: ip
+    value: " "
+    label: IP Address
+    field_type: text_field
+    select_collection: ''
+    tooltip: " "
+    hint: ip address
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: 
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  ip_type:
+    name: ip_type
+    value: ''
+    label: ip_type
+    field_type: text
+    select_collection: ''
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: false
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
 type_consumer_params: {}
-configurators: {}
+configurators:
+  dns_forwarders:
+    name: dns_forwarders
+    label: dns_forwarders
+    description: ''
+    no_save: false
+    params:
+      dns_server2:
+        name: dns_server2
+        value: ''
+        label: 2nd Upstream DNS
+        field_type: text
+        select_collection: ''
+        tooltip: ''
+        hint: IP address x.x.x.x
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      dns_server:
+        name: dns_server
+        value: ''
+        label: Upstream DNS
+        field_type: text
+        select_collection: ''
+        tooltip: ''
+        hint: 'IP address x.x.x.x '
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
 service_actionators: {}
 constants: {}
