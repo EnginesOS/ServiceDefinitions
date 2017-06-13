@@ -19,38 +19,6 @@ attach_post_build: false
 attach_requires_restart: false
 target_environment_variables: 
 consumer_params:
-  volume:
-    name: volume
-    value: " "
-    label: volume
-    field_type: text_field
-    select_collection: ''
-    tooltip: " "
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: false
-  button:
-    name: button
-    value: 
-    label: button test
-    field_type: text_field
-    select_collection: ''
-    tooltip: " "
-    hint: 
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: 
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: false
   username:
     name: username
     value: 
@@ -95,6 +63,38 @@ consumer_params:
     comment: 
     regex_validator: ".*"
     regex_invalid_message: 
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
+  button:
+    name: button
+    value: 
+    label: button test
+    field_type: text_field
+    select_collection: ''
+    tooltip: " "
+    hint: 
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: 
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
+  volume:
+    name: volume
+    value: " "
+    label: volume
+    field_type: text_field
+    select_collection: ''
+    tooltip: " "
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
     mandatory: true
     ask_at_build_time: false
     build_time_only: false

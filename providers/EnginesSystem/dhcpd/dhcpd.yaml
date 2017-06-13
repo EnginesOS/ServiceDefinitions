@@ -26,6 +26,102 @@ configurators:
     description: Configure DHCP Server settings
     no_save: 
     params:
+      domain_name:
+        name: domain_name
+        value: Engines_System(defaul_domain)
+        label: Default Domain
+        field_type: text_field
+        select_collection: ''
+        tooltip: " "
+        hint: domain.tld
+        placeholder: " "
+        comment: " "
+        regex_validator: ".*"
+        regex_invalid_message: 
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      subnet:
+        name: subnet
+        value: ''
+        label: Subnet
+        field_type: text_field
+        select_collection: ''
+        tooltip: " "
+        hint: 'x.x.x.x/y '
+        placeholder: ''
+        comment: " "
+        regex_validator: ".*"
+        regex_invalid_message: 
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      start:
+        name: start
+        value: ''
+        label: DHCP Range Start
+        field_type: text_field
+        select_collection: ''
+        tooltip: " "
+        hint: x.x.x.x
+        placeholder: x.x.x.x
+        comment: " "
+        regex_validator: ".*"
+        regex_invalid_message: 
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      end:
+        name: end
+        value: 
+        label: end
+        field_type: text_field
+        select_collection: ''
+        tooltip: " "
+        hint: 'username '
+        placeholder: x.x.x.x
+        comment: " "
+        regex_validator: ".*"
+        regex_invalid_message: 
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      default_lease:
+        name: default_lease
+        value: '6000'
+        label: Default Lease Time
+        field_type: text
+        select_collection: ''
+        tooltip: " "
+        hint: in secs
+        placeholder: ''
+        comment: " "
+        regex_validator: "[0-9]."
+        regex_invalid_message: 
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      default_gateway:
+        name: default_gateway
+        value: Engines_System(gateway)
+        label: Default Gateway
+        field_type: text
+        select_collection: ''
+        tooltip: " "
+        hint: ip or host
+        placeholder: x.x.x.x
+        comment: " "
+        regex_validator: ".*"
+        regex_invalid_message: 
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
       dns_server2:
         name: dns_server2
         value: Engines_System(dns2)
@@ -55,102 +151,6 @@ configurators:
         regex_validator: ".*"
         regex_invalid_message: 
         mandatory: false
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
-      default_gateway:
-        name: default_gateway
-        value: Engines_System(gateway)
-        label: Default Gateway
-        field_type: text
-        select_collection: ''
-        tooltip: " "
-        hint: ip or host
-        placeholder: x.x.x.x
-        comment: " "
-        regex_validator: ".*"
-        regex_invalid_message: 
-        mandatory: false
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
-      default_lease:
-        name: default_lease
-        value: '6000'
-        label: Default Lease Time
-        field_type: text
-        select_collection: ''
-        tooltip: " "
-        hint: in secs
-        placeholder: ''
-        comment: " "
-        regex_validator: "[0-9]."
-        regex_invalid_message: 
-        mandatory: true
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
-      end:
-        name: end
-        value: 
-        label: end
-        field_type: text_field
-        select_collection: ''
-        tooltip: " "
-        hint: 'username '
-        placeholder: x.x.x.x
-        comment: " "
-        regex_validator: ".*"
-        regex_invalid_message: 
-        mandatory: true
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
-      start:
-        name: start
-        value: ''
-        label: DHCP Range Start
-        field_type: text_field
-        select_collection: ''
-        tooltip: " "
-        hint: x.x.x.x
-        placeholder: x.x.x.x
-        comment: " "
-        regex_validator: ".*"
-        regex_invalid_message: 
-        mandatory: true
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
-      subnet:
-        name: subnet
-        value: ''
-        label: Subnet
-        field_type: text_field
-        select_collection: ''
-        tooltip: " "
-        hint: 'x.x.x.x/y '
-        placeholder: ''
-        comment: " "
-        regex_validator: ".*"
-        regex_invalid_message: 
-        mandatory: true
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
-      domain_name:
-        name: domain_name
-        value: Engines_System(defaul_domain)
-        label: Default Domain
-        field_type: text_field
-        select_collection: ''
-        tooltip: " "
-        hint: domain.tld
-        placeholder: " "
-        comment: " "
-        regex_validator: ".*"
-        regex_invalid_message: 
-        mandatory: true
         ask_at_build_time: false
         build_time_only: false
         immutable: false
