@@ -102,10 +102,26 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-      bl_spamcop_net:
-        name: bl_spamcop_net
+      dnsbl_sorbs_net:
+        name: dnsbl_sorbs_net
         value: 'false'
-        label: bl.spamcop.net
+        label: dnsbl.sorbs.net
+        field_type: boolean
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      dsn_rfc-ignorant_org:
+        name: dsn_rfc-ignorant_org
+        value: 'false'
+        label: dsn.rfc-ignorant.org
         field_type: boolean
         select_collection: ''
         tooltip: ''
@@ -150,26 +166,10 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-      dnsbl_sorbs_net:
-        name: dnsbl_sorbs_net
+      bl_spamcop_net:
+        name: bl_spamcop_net
         value: 'false'
-        label: dnsbl.sorbs.net
-        field_type: boolean
-        select_collection: ''
-        tooltip: ''
-        hint: ''
-        placeholder: ''
-        comment: ''
-        regex_validator: ''
-        regex_invalid_message: ''
-        mandatory: false
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
-      dsn_rfc-ignorant_org:
-        name: dsn_rfc-ignorant_org
-        value: 'false'
-        label: dsn.rfc-ignorant.org
+        label: bl.spamcop.net
         field_type: boolean
         select_collection: ''
         tooltip: ''
@@ -240,7 +240,7 @@ configurators:
         name: whitelist_addresses
         value: ''
         label: White Listed Adresses
-        field_type: text_box
+        field_type: text_area
         select_collection: ''
         tooltip: List of email adresses
         hint: ''
