@@ -433,8 +433,8 @@ service_actionators:
     label: system_ca
     description: ''
     log: false
-    return_type: plain_text
-    return_file_name: 
+    return_type: file
+    return_file_name: enginesCA.crt
     params: 
   set_default:
     name: set_default
