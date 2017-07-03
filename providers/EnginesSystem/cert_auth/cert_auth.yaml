@@ -436,6 +436,62 @@ service_actionators:
     return_type: plain_text
     return_file_name: 
     params: 
+  set_default:
+    name: set_default
+    label: Set Default
+    description: ''
+    log: false
+    return_type: plain_text
+    return_file_name: 
+    params:
+      target:
+        name: target
+        value: default
+        label: Target
+        field_type: ''
+        select_collection: ''
+        tooltip: default|enail|smtp|imap|ftp|nginx|ivpn||mysql|pgsql
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      cert_name:
+        name: cert_name
+        value: ''
+        label: Certificate name
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      store:
+        name: store
+        value: ''
+        label: Store
+        field_type: ''
+        select_collection: ''
+        tooltip: imported/ ctype/cname/
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
 constants:
   backup_support:
     name: backup_support
