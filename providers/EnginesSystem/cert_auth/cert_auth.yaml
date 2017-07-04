@@ -308,6 +308,22 @@ service_actionators:
         ask_at_build_time: true
         build_time_only: false
         immutable: false
+      store:
+        name: store
+        value: ''
+        label: Store
+        field_type: ''
+        select_collection: ''
+        tooltip: imported|container type/name
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
   import_cert:
     name: import_cert
     label: import_cert
@@ -339,6 +355,22 @@ service_actionators:
         field_type: text_field
         select_collection: ''
         tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      target:
+        name: target
+        value: nginx
+        label: Target
+        field_type: ''
+        select_collection: ''
+        tooltip: smtp|email|imap|nginx|mysql|pgsql|ivpn
         hint: ''
         placeholder: ''
         comment: ''
@@ -380,14 +412,86 @@ service_actionators:
         ask_at_build_time: false
         build_time_only: true
         immutable: false
+      store:
+        name: store
+        value: ''
+        label: Store
+        field_type: ''
+        select_collection: ''
+        tooltip: imported|container_type/name
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
   system_ca:
     name: system_ca
     label: system_ca
     description: ''
     log: false
+    return_type: file
+    return_file_name: enginesCA.crt
+    params: 
+  set_default:
+    name: set_default
+    label: Set Default
+    description: ''
+    log: false
     return_type: plain_text
     return_file_name: 
-    params: 
+    params:
+      target:
+        name: target
+        value: default
+        label: Target
+        field_type: ''
+        select_collection: ''
+        tooltip: default|enail|smtp|imap|ftp|nginx|ivpn||mysql|pgsql
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      cert_name:
+        name: cert_name
+        value: ''
+        label: Certificate name
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      store:
+        name: store
+        value: ''
+        label: Store
+        field_type: ''
+        select_collection: ''
+        tooltip: imported/ ctype/cname/
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
 constants:
   backup_support:
     name: backup_support
