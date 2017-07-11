@@ -380,5 +380,29 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-service_actionators: {}
+service_actionators:
+  download_public_key:
+    name: download_public_key
+    label: Download Public Key
+    description: ''
+    log: false
+    return_type: file
+    return_file_name: backup_key.pub
+    params: 
+  download_private_key:
+    name: download_private_key
+    label: Download Private Key
+    description: ''
+    log: false
+    return_type: file
+    return_file_name: backup_key.priv
+    params: 
+  show_backup_password:
+    name: show_backup_password
+    label: Show Backup Password
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params: 
 constants: {}
