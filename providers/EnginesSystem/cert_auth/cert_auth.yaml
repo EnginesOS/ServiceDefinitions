@@ -332,8 +332,8 @@ service_actionators:
     return_type: none
     return_file_name: 
     params:
-      cert:
-        name: cert
+      certificate:
+        name: certificate
         value: ''
         label: ''
         field_type: text_field
@@ -348,8 +348,8 @@ service_actionators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-      key:
-        name: key
+      private_key:
+        name: private_key
         value: ''
         label: ''
         field_type: text_field
