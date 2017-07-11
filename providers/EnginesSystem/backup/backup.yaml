@@ -405,4 +405,76 @@ service_actionators:
     return_type: json
     return_file_name: 
     params: 
+  restore:
+    name: restore
+    label: Restore
+    description: ''
+    log: false
+    return_type: plain_text
+    return_file_name: 
+    params:
+      type:
+        name: type
+        value: ''
+        label: Restore type
+        field_type: ''
+        select_collection: ''
+        tooltip: all|system|registry|service|volume
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      before:
+        name: before
+        value: Before Date
+        label: ''
+        field_type: ''
+        select_collection: ''
+        tooltip: y/m/d
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      source:
+        name: source
+        value: ''
+        label: Source
+        field_type: ''
+        select_collection: ''
+        tooltip: service|engine
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      section:
+        name: section
+        value: ''
+        label: Section
+        field_type: ''
+        select_collection: ''
+        tooltip: Restore just a dir or db or .. or table
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
 constants: {}
