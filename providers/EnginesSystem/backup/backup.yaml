@@ -477,4 +477,60 @@ service_actionators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
+  set_backup_credentials:
+    name: set_backup_credentials
+    label: Credentials for Restore
+    description: "Used for restoration\r\n"
+    log: true
+    return_type: plain_text
+    return_file_name: 
+    params:
+      backup_password:
+        name: backup_password
+        value: ''
+        label: Password
+        field_type: password
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      pub_key:
+        name: pub_key
+        value: ''
+        label: ''
+        field_type: text
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      priv_key:
+        name: priv_key
+        value: ''
+        label: Private Key
+        field_type: text
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
 constants: {}
