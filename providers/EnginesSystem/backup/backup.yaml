@@ -533,4 +533,44 @@ service_actionators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
+  set_key_id:
+    name: set_key_id
+    label: Set key id
+    description: ''
+    log: false
+    return_type: plain_text
+    return_file_name: 
+    params:
+      disabled:
+        name: disabled
+        value: ''
+        label: ''
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      key_id:
+        name: key_id
+        value: ''
+        label: Key ID
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
 constants: {}
