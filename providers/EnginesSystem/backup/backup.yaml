@@ -380,5 +380,221 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-service_actionators: {}
+service_actionators:
+  download_public_key:
+    name: download_public_key
+    label: Download Public Key
+    description: ''
+    log: false
+    return_type: file
+    return_file_name: backup_key.pub
+    params: 
+  download_private_key:
+    name: download_private_key
+    label: Download Private Key
+    description: ''
+    log: false
+    return_type: file
+    return_file_name: backup_key.priv
+    params: 
+  show_backup_password:
+    name: show_backup_password
+    label: Show Backup Password
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params: 
+  restore:
+    name: restore
+    label: Restore
+    description: ''
+    log: false
+    return_type: plain_text
+    return_file_name: 
+    params:
+      type:
+        name: type
+        value: ''
+        label: Restore type
+        field_type: ''
+        select_collection: ''
+        tooltip: all|system|registry|service|volume
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      before:
+        name: before
+        value: Before Date
+        label: ''
+        field_type: ''
+        select_collection: ''
+        tooltip: y/m/d
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      source:
+        name: source
+        value: ''
+        label: Source
+        field_type: ''
+        select_collection: ''
+        tooltip: service|engine
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      section:
+        name: section
+        value: ''
+        label: Section
+        field_type: ''
+        select_collection: ''
+        tooltip: Restore just a dir or db or .. or table
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+  set_backup_credentials:
+    name: set_backup_credentials
+    label: Credentials for Restore
+    description: "Used for restoration\r\n"
+    log: true
+    return_type: plain_text
+    return_file_name: 
+    params:
+      backup_password:
+        name: backup_password
+        value: ''
+        label: Password
+        field_type: password
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      pub_key:
+        name: pub_key
+        value: ''
+        label: ''
+        field_type: text
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      priv_key:
+        name: priv_key
+        value: ''
+        label: Private Key
+        field_type: text
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+  set_key_id:
+    name: set_key_id
+    label: Set key id
+    description: ''
+    log: false
+    return_type: plain_text
+    return_file_name: 
+    params:
+      disabled:
+        name: disabled
+        value: ''
+        label: ''
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      key_id:
+        name: key_id
+        value: ''
+        label: Key ID
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+  run_backup:
+    name: run_backup
+    label: Run Backup
+    description: ''
+    log: true
+    return_type: plain_text
+    return_file_name: 
+    params:
+      backup_name:
+        name: backup_name
+        value: Back Up Name
+        label: ''
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: Leave blank for complete
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
 constants: {}
