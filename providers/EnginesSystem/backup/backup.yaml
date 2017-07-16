@@ -573,4 +573,28 @@ service_actionators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
+  run_backup:
+    name: run_backup
+    label: Run Backup
+    description: ''
+    log: true
+    return_type: plain_text
+    return_file_name: 
+    params:
+      backup_name:
+        name: backup_name
+        value: Back Up Name
+        label: ''
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: Leave blank for complete
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
 constants: {}
