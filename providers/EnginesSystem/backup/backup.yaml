@@ -597,4 +597,20 @@ service_actionators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
+  list_backups:
+    name: list_backups
+    label: List Backups
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params: 
+  status:
+    name: status
+    label: Status
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params: 
 constants: {}
