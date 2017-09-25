@@ -252,7 +252,63 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-service_actionators: {}
+service_actionators:
+  list_domains:
+    name: list_domains
+    label: List  Email domains
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params: 
+  add_domain:
+    name: add_domain
+    label: Add Domain
+    description: ''
+    log: false
+    return_type: plain_text
+    return_file_name: 
+    params:
+      domain_name:
+        name: domain_name
+        value: ''
+        label: Domain Name
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+  del_domain:
+    name: del_domain
+    label: Remove  Domain
+    description: ''
+    log: false
+    return_type: plain_text
+    return_file_name: 
+    params:
+      domain_name:
+        name: domain_name
+        value: ''
+        label: Domain Name
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
 constants:
   backup_support:
     name: backup_support
