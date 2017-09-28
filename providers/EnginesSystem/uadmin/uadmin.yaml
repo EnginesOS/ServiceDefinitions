@@ -221,8 +221,8 @@ service_actionators:
     return_type: json
     return_file_name: 
     params:
-      'group_name ':
-        name: 'group_name '
+      group_name:
+        name: group_name
         value: ''
         label: Group Name
         field_type: ''
@@ -245,9 +245,9 @@ service_actionators:
     return_type: json
     return_file_name: 
     params: 
-  list_user_email_adresses:
-    name: list_user_email_adresses
-    label: List User Email Adresses
+  list_user_email_addresses:
+    name: list_user_email_addresses
+    label: List User Email Addresses
     description: ''
     log: false
     return_type: json
@@ -447,7 +447,55 @@ service_actionators:
         immutable: false
   user_details:
     name: user_details
-    label: ''
+    label: User Details
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params:
+      uid:
+        name: uid
+        value: ''
+        label: User ID
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+  group_details:
+    name: group_details
+    label: Group Details
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params:
+      group_name:
+        name: group_name
+        value: ''
+        label: Group Name
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+  user_group_membership:
+    name: user_group_membership
+    label: User Group Membership
     description: ''
     log: false
     return_type: json
