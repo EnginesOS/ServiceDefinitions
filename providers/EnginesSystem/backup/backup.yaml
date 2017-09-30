@@ -597,4 +597,60 @@ service_actionators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
+  list_backups:
+    name: list_backups
+    label: List Backups
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params: 
+  status:
+    name: status
+    label: Status
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params: 
+  backup_logs:
+    name: backup_logs
+    label: Backup logs
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params:
+      backup_name:
+        name: backup_name
+        value: Backup Name
+        label: ''
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: name from backup list
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      date:
+        name: date
+        value: ''
+        label: ''
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: dd_mm_yy
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
 constants: {}
