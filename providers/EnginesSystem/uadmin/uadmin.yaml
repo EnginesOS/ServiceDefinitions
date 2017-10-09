@@ -85,8 +85,8 @@ service_actionators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-      group:
-        name: group
+      group_name:
+        name: group_name
         value: ''
         label: Group name
         field_type: ''
@@ -207,8 +207,8 @@ service_actionators:
         immutable: true
       domain_name:
         name: domain_name
-        value: ''
-        label: _Engines_System(default_domain)
+        value: _Engines_System(default_domain)
+        label: pimary email domain name
         field_type: ''
         select_collection: ''
         tooltip: ''
@@ -538,6 +538,46 @@ service_actionators:
         value: ''
         label: User ID
         field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+  change_user_password:
+    name: change_user_password
+    label: Change Password
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params:
+      uid:
+        name: uid
+        value: ''
+        label: User ID
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      password:
+        name: password
+        value: Password
+        label: ''
+        field_type: password
         select_collection: ''
         tooltip: ''
         hint: ''
