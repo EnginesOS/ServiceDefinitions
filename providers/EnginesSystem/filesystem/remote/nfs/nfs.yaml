@@ -10,7 +10,7 @@ major: 0
 minor: 0
 release_level: Alpha
 patch: 0
-service_container: nfs
+service_container: nfsr
 service_handle_field: name
 dedicated: false
 persistent: false
