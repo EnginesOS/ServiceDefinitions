@@ -701,8 +701,8 @@ service_actionators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-  remove_email_group:
-    name: remove_email_group
+  rm_email_group:
+    name: rm_email_group
     label: Remove Email Group
     description: ''
     log: false
@@ -725,8 +725,8 @@ service_actionators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-  remove_email_from_email_group:
-    name: remove_email_from_email_group
+  rm_email_from_email_group:
+    name: rm_email_from_email_group
     label: Remove email from email group
     description: ''
     log: false
