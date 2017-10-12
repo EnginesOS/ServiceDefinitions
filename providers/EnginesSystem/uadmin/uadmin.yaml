@@ -625,7 +625,7 @@ service_actionators:
     name: create_email_group
     label: Create Email group
     description: ''
-    log: false
+    log: true
     return_type: json
     return_file_name: 
     params:
@@ -665,7 +665,7 @@ service_actionators:
     name: add_email_to_email_group
     label: Add email address to email group
     description: ''
-    log: false
+    log: true
     return_type: json
     return_file_name: 
     params:
@@ -705,7 +705,7 @@ service_actionators:
     name: rm_email_group
     label: Remove Email Group
     description: ''
-    log: false
+    log: true
     return_type: json
     return_file_name: 
     params:
@@ -729,7 +729,7 @@ service_actionators:
     name: rm_email_from_email_group
     label: Remove email from email group
     description: ''
-    log: false
+    log: true
     return_type: json
     return_file_name: 
     params:
