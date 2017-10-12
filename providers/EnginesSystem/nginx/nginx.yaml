@@ -116,6 +116,38 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: false
+  system_auth:
+    name: system_auth
+    value: '0'
+    label: Use System Auth
+    field_type: ''
+    select_collection: ''
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: false
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
+  auth_group:
+    name: auth_group
+    value: _Engines_Builder(engine_name)
+    label: Auth Group
+    field_type: ''
+    select_collection: ''
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: false
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
 type_consumer_params: {}
 configurators:
   default_site:
