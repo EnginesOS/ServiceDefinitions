@@ -61,4 +61,7 @@ service_actionators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-constants: {}
+constants:
+  backup_support:
+    name: backup_support
+    value: 'true'
