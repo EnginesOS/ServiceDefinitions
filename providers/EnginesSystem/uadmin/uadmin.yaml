@@ -765,4 +765,28 @@ service_actionators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
+  all_user_names:
+    name: all_user_names
+    label: All User ID's
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params: 
+  all_email_adresses:
+    name: all_email_adresses
+    label: All Email Adresses
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params: 
+  all_group_names:
+    name: all_group_names
+    label: List all Groups name
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params: 
 constants: {}
