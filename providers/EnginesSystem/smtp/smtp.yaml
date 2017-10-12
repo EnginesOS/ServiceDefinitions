@@ -161,16 +161,16 @@ service_actionators:
     return_type: json
     return_file_name: 
     params: 
-  remove_mesg:
-    name: remove_mesg
+  rm_email:
+    name: rm_email
     label: Remove email from queue
     description: ''
     log: true
     return_type: json
     return_file_name: 
     params:
-      mesg_id:
-        name: mesg_id
+      queue_id:
+        name: queue_id
         value: ''
         label: Message ID
         field_type: ''
