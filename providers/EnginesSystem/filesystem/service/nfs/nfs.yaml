@@ -4,13 +4,13 @@ publisher_namespace: EnginesSystem
 accepts:
 - ManagedEngine
 author: Engines
-title: NFS access to external Volumes
+title: NFS external access to Volumes
 description: Provides NFS Access for File Storage
 major: 0
 minor: 0
 release_level: Alpha
 patch: 0
-service_container: nfs
+service_container: nfsd
 service_handle_field: name
 dedicated: false
 persistent: true
