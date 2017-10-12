@@ -309,6 +309,30 @@ service_actionators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
+  show_queue:
+    name: show_queue
+    label: Show mail queue
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params: 
+  flush_queue:
+    name: flush_queue
+    label: Flush mail queue
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params: 
+  remove_mesg:
+    name: remove_mesg
+    label: Remove email from queue
+    description: ''
+    log: true
+    return_type: json
+    return_file_name: 
+    params: 
 constants:
   backup_support:
     name: backup_support
