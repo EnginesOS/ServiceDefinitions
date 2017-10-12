@@ -86,5 +86,13 @@ consumer_params:
     immutable: false
 type_consumer_params: {}
 configurators: {}
-service_actionators: {}
+service_actionators:
+  show_crontab:
+    name: show_crontab
+    label: Show Crontab
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params: 
 constants: {}
