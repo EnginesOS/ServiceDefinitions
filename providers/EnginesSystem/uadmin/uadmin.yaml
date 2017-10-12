@@ -7,7 +7,7 @@ title: User admin
 description: ''
 major: 0
 minor: 0
-release_level: Alpha
+release_level: Beta
 patch: 0
 service_container: uadmin
 service_handle_field: ''
@@ -578,6 +578,182 @@ service_actionators:
         value: Password
         label: ''
         field_type: password
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+  list_email_groups:
+    name: list_email_groups
+    label: List email groups
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params: 
+  list_email_group_members:
+    name: list_email_group_members
+    label: List members of an Email Group
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params:
+      email_group:
+        name: email_group
+        value: ''
+        label: Email Group
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+  create_email_group:
+    name: create_email_group
+    label: Create Email group
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params:
+      email_group:
+        name: email_group
+        value: ''
+        label: Email Group Name
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      email_address:
+        name: email_address
+        value: ''
+        label: Email address
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+  add_email_to_email_group:
+    name: add_email_to_email_group
+    label: Add email address to email group
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params:
+      email_group:
+        name: email_group
+        value: ''
+        label: Email Group Name
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      email_address:
+        name: email_address
+        value: ''
+        label: Email address
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+  remove_email_group:
+    name: remove_email_group
+    label: Remove Email Group
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params:
+      email_group:
+        name: email_group
+        value: ''
+        label: ''
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+  remove_email_from_email_group:
+    name: remove_email_from_email_group
+    label: Remove email from email group
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params:
+      email_group:
+        name: email_group
+        value: ''
+        label: Email Group Name
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      email_address:
+        name: email_address
+        value: ''
+        label: Email address
+        field_type: ''
         select_collection: ''
         tooltip: ''
         hint: ''
