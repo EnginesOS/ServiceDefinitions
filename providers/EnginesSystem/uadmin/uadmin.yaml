@@ -645,10 +645,10 @@ service_actionators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-      email_address:
-        name: email_address
+      description:
+        name: description
         value: ''
-        label: Email address
+        label: Description
         field_type: ''
         select_collection: ''
         tooltip: ''
