@@ -3,8 +3,8 @@ type_path: openid
 publisher_namespace: EnginesSystem
 accepts: []
 author: 
-title: openid
-description: ''
+title: OpenID
+description: OpenID provider
 major: 0
 minor: 0
 release_level: Alpha

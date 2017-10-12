@@ -19,17 +19,20 @@ attach_requires_restart: false
 target_environment_variables: 
 consumer_params: {}
 type_consumer_params: {}
-configurators:
-  password:
-    name: password
-    label: Set web admin password
+configurators: {}
+service_actionators:
+  set_admin_password:
+    name: set_admin_password
+    label: Set LDAP Admin Password
     description: ''
-    no_save: true
+    log: false
+    return_type: json
+    return_file_name: 
     params:
-      password:
-        name: password
+      current_password:
+        name: current_password
         value: ''
-        label: Password
+        label: Current Password
         field_type: password
         select_collection: ''
         tooltip: ''
@@ -42,5 +45,23 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-service_actionators: {}
-constants: {}
+      new_password:
+        name: new_password
+        value: ''
+        label: 'New Password '
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+constants:
+  backup_support:
+    name: backup_support
+    value: 'true'

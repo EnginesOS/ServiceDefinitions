@@ -53,32 +53,32 @@ consumer_params:
     immutable: true
   username:
     name: username
-    value: _Engines_Builder(engine_name)
+    value: _Engines_System(service_account())
     label: User Name
     field_type: text_field
     select_collection: ''
-    tooltip: " "
-    hint: " "
-    placeholder: " "
-    comment: " "
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
     regex_validator: ".*"
-    regex_invalid_message: 
+    regex_invalid_message: ''
     mandatory: true
     ask_at_build_time: false
     build_time_only: false
     immutable: true
   password:
     name: password
-    value: _Engines_System(random(8))
+    value: _Engines_Builder(service_password(8))
     label: password
     field_type: password_with_confirmation
     select_collection: ''
-    tooltip: " "
-    hint: " "
-    placeholder: " "
-    comment: " "
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
     regex_validator: ".*"
-    regex_invalid_message: 
+    regex_invalid_message: ''
     mandatory: true
     ask_at_build_time: false
     build_time_only: false

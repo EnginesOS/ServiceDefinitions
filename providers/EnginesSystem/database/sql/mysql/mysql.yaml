@@ -66,7 +66,7 @@ consumer_params:
     mandatory: true
     ask_at_build_time: true
     build_time_only: false
-    immutable: true
+    immutable: false
   collation:
     name: collation
     value: utf8_general_ci

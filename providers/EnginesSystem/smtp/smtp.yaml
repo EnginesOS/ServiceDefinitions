@@ -144,5 +144,45 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-service_actionators: {}
+service_actionators:
+  show_queue:
+    name: show_queue
+    label: Show mail queue
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params: 
+  flush_queue:
+    name: flush_queue
+    label: Flush mail queue
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params: 
+  rm_email:
+    name: rm_email
+    label: Remove email from queue
+    description: ''
+    log: true
+    return_type: json
+    return_file_name: 
+    params:
+      queue_id:
+        name: queue_id
+        value: ''
+        label: Message ID
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
 constants: {}
