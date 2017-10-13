@@ -789,4 +789,28 @@ service_actionators:
     return_type: json
     return_file_name: 
     params: 
+  whose_email:
+    name: whose_email
+    label: Who receives an Email Address
+    description: ''
+    log: false
+    return_type: json
+    return_file_name: 
+    params:
+      email_address:
+        name: email_address
+        value: ''
+        label: Email address
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
 constants: {}
