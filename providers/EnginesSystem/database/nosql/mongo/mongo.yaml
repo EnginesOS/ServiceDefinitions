@@ -11,56 +11,41 @@ major: 0
 minor: 0
 release_level: Alpha
 patch: 0
-service_container: mongo_server
+service_container: mongod
 service_handle_field: database_name
 dedicated: false
-persistent: true
+persistent: false
 immutable: true
 attach_post_build: false
 attach_requires_restart: false
-target_environment_variables:
-  dbpasswd:
-    environment_name: dbpasswd
-    variable_name: db_password
-  dbname:
-    environment_name: dbname
-    variable_name: database_name
-  dbuser:
-    environment_name: dbuser
-    variable_name: db_username
-  dbhost:
-    environment_name: dbhost
-    variable_name: database_host
-  rails_flavor:
-    environment_name: rails_flavor
-    variable_name: rails_flavor
+target_environment_variables: 
 consumer_params:
-  db_password:
-    name: db_password
-    value: _Engines_System(random(10))
+  dbpassword:
+    name: dbpassword
+    value: " "
     label: DB Password
     field_type: password_with_confirmation
     select_collection: ''
-    tooltip: ''
-    hint: ''
-    placeholder: ''
-    comment: ''
+    tooltip: " "
+    hint: " "
+    placeholder: " "
+    comment: " "
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
     ask_at_build_time: false
     build_time_only: false
     immutable: false
-  db_username:
-    name: db_username
-    value: _Engines_Builder(engine_name)
+  dbusername:
+    name: dbusername
+    value: " "
     label: DB User Name
     field_type: text_field
     select_collection: ''
-    tooltip: ''
-    hint: ''
-    placeholder: ''
-    comment: ''
+    tooltip: " "
+    hint: " "
+    placeholder: " "
+    comment: " "
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
@@ -69,14 +54,14 @@ consumer_params:
     immutable: false
   database_name:
     name: database_name
-    value: _Engines_Builder(engine_name)
+    value: " "
     label: Database name
     field_type: text_field
     select_collection: ''
-    tooltip: ''
-    hint: ''
-    placeholder: ''
-    comment: ''
+    tooltip: " "
+    hint: " "
+    placeholder: " "
+    comment: " "
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
@@ -85,25 +70,25 @@ consumer_params:
     immutable: false
   database_host:
     name: database_host
-    value: _Engines_System(mongo_host)
+    value: " "
     label: database_host
     field_type: text_field
     select_collection: ''
     tooltip: Local or the ip address/hostname of the database server
-    hint: ''
-    placeholder: ''
-    comment: ''
+    hint: " "
+    placeholder: " "
+    comment: " "
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
     ask_at_build_time: false
     build_time_only: false
     immutable: false
-  rails_flavor:
-    name: rails_flavor
-    value: mongodb
-    label: ''
-    field_type: ''
+  root_access:
+    name: root_access
+    value: 'false'
+    label: root_access
+    field_type: boolean
     select_collection: ''
     tooltip: ''
     hint: ''
@@ -112,35 +97,10 @@ consumer_params:
     regex_validator: ''
     regex_invalid_message: ''
     mandatory: false
-    ask_at_build_time: false
+    ask_at_build_time: true
     build_time_only: false
-    immutable: true
+    immutable: false
 type_consumer_params: {}
-configurators:
-  db_master_pass:
-    name: db_master_pass
-    label: Set admin password
-    description: ''
-    no_save: true
-    params:
-      db_master_pass:
-        name: db_master_pass
-        value: ''
-        label: Admin password
-        field_type: password
-        select_collection: ''
-        tooltip: ''
-        hint: ''
-        placeholder: ''
-        comment: ''
-        regex_validator: ''
-        regex_invalid_message: ''
-        mandatory: true
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
+configurators: {}
 service_actionators: {}
-constants:
-  backup_support:
-    name: backup_support
-    value: 'true'
+constants: {}
