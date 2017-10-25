@@ -130,16 +130,16 @@ configurators:
         immutable: false
       domain_name:
         name: domain_name
-        value: 
+        value: _Engines_System(default_domain)
         label: Default Domain
         field_type: text_field
         select_collection: ''
-        tooltip: " "
+        tooltip: ''
         hint: default domain name
-        placeholder: " "
-        comment: " "
+        placeholder: ''
+        comment: ''
         regex_validator: ".*"
-        regex_invalid_message: 
+        regex_invalid_message: ''
         mandatory: true
         ask_at_build_time: false
         build_time_only: false
