@@ -7,17 +7,65 @@ title: ldap
 description: ''
 major: 0
 minor: 0
-release_level: Alpha
+release_level: Beta
 patch: 0
 service_container: ldap
-service_handle_field: ''
+service_handle_field: parent_engine
 dedicated: false
 persistent: true
 immutable: false
 attach_post_build: false
 attach_requires_restart: false
 target_environment_variables: 
-consumer_params: {}
+consumer_params:
+  type:
+    name: type
+    value: ''
+    label: Type
+    field_type: text
+    select_collection: ''
+    tooltip: ''
+    hint: ou|group
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  parent_engine:
+    name: parent_engine
+    value: _Engines_Builder(engine_name)
+    label: parent_engine
+    field_type: ''
+    select_collection: ''
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  cn:
+    name: cn
+    value: ''
+    label: cn
+    field_type: ''
+    select_collection: ''
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: false
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
 type_consumer_params: {}
 configurators: {}
 service_actionators:
