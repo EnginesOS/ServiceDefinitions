@@ -500,6 +500,158 @@ service_actionators:
     return_type: json
     return_file_name: 
     params: 
+  create_certificate:
+    name: create_certificate
+    label: Create Certficate
+    description: ''
+    log: true
+    return_type: json
+    return_file_name: 
+    params:
+      country:
+        name: country
+        value: ''
+        label: ''
+        field_type: '2 Character Country Code '
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ".2"
+        regex_invalid_message: To Letter Country Code
+        mandatory: true
+        ask_at_build_time: true
+        build_time_only: false
+        immutable: true
+      state:
+        name: state
+        value: ''
+        label: State
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: true
+        build_time_only: false
+        immutable: false
+      organisation:
+        name: organisation
+        value: ''
+        label: 'Organisation '
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: true
+        build_time_only: false
+        immutable: false
+      city:
+        name: city
+        value: ''
+        label: City
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: true
+        build_time_only: false
+        immutable: false
+      cert_name:
+        name: cert_name
+        value: ''
+        label: Certificate Name
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: true
+        build_time_only: false
+        immutable: false
+      domainname:
+        name: domainname
+        value: ''
+        label: Domain Name
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: true
+        build_time_only: false
+        immutable: false
+      hostname:
+        name: hostname
+        value: ''
+        label: Hostname
+        field_type: ''
+        select_collection: ''
+        tooltip: if blank cert is wildcard
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: true
+        build_time_only: false
+        immutable: false
+      'alt_names ':
+        name: 'alt_names '
+        value: ''
+        label: Alternative Names
+        field_type: ''
+        select_collection: ''
+        tooltip: List of space seperated names
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: true
+        build_time_only: false
+        immutable: false
+      person:
+        name: person
+        value: ''
+        label: Person
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: true
+        build_time_only: false
+        immutable: false
 constants:
   backup_support:
     name: backup_support
