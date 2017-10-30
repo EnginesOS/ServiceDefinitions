@@ -616,7 +616,7 @@ service_actionators:
         comment: ''
         regex_validator: ''
         regex_invalid_message: ''
-        mandatory: true
+        mandatory: false
         ask_at_build_time: true
         build_time_only: false
         immutable: false
@@ -632,7 +632,7 @@ service_actionators:
         comment: ''
         regex_validator: ''
         regex_invalid_message: ''
-        mandatory: true
+        mandatory: false
         ask_at_build_time: true
         build_time_only: false
         immutable: false
