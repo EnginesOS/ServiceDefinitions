@@ -10,7 +10,7 @@ minor: 0
 release_level: Beta
 patch: 0
 service_container: ldap
-service_handle_field: parent_engine
+service_handle_field: cn
 dedicated: false
 persistent: true
 immutable: false
@@ -52,7 +52,7 @@ consumer_params:
     immutable: true
   cn:
     name: cn
-    value: ''
+    value: _Engines_Builder(engine_name)
     label: cn
     field_type: ''
     select_collection: ''
