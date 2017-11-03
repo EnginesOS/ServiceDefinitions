@@ -3,7 +3,7 @@ type_path: redis
 publisher_namespace: EnginesSystem
 accepts:
 - ManagedEngine
-author: 
+author:
 title: redis
 description: ''
 major: 0
