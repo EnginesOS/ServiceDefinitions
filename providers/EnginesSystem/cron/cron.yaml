@@ -84,8 +84,47 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: false
+  notification_address:
+    name: notification_address
+    value: ''
+    label: Notication address
+    field_type: ''
+    select_collection: ''
+    tooltip: not present or 'default' for default, none for silent, log for log, email
+      address for email
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: false
+    ask_at_build_time: true
+    build_time_only: false
+    immutable: false
 type_consumer_params: {}
-configurators: {}
+configurators:
+  cron_default_email:
+    name: cron_default_email
+    label: Cron notification email address
+    description: ''
+    no_save: false
+    params:
+      cron_default_email:
+        name: cron_default_email
+        value: ''
+        label: Default notification mail  address
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: true
+        build_time_only: false
+        immutable: false
 service_actionators:
   show_crontab:
     name: show_crontab
