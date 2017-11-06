@@ -102,26 +102,10 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-      dnsbl_sorbs_net:
-        name: dnsbl_sorbs_net
+      bl_spamcop_net:
+        name: bl_spamcop_net
         value: 'false'
-        label: dnsbl.sorbs.net
-        field_type: boolean
-        select_collection: ''
-        tooltip: ''
-        hint: ''
-        placeholder: ''
-        comment: ''
-        regex_validator: ''
-        regex_invalid_message: ''
-        mandatory: false
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
-      dsn_rfc-ignorant_org:
-        name: dsn_rfc-ignorant_org
-        value: 'false'
-        label: dsn.rfc-ignorant.org
+        label: bl.spamcop.net
         field_type: boolean
         select_collection: ''
         tooltip: ''
@@ -166,10 +150,26 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-      bl_spamcop_net:
-        name: bl_spamcop_net
+      dnsbl_sorbs_net:
+        name: dnsbl_sorbs_net
         value: 'false'
-        label: bl.spamcop.net
+        label: dnsbl.sorbs.net
+        field_type: boolean
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      dsn_rfc-ignorant_org:
+        name: dsn_rfc-ignorant_org
+        value: 'false'
+        label: dsn.rfc-ignorant.org
         field_type: boolean
         select_collection: ''
         tooltip: ''
@@ -240,7 +240,7 @@ configurators:
         name: whitelist_addresses
         value: ''
         label: White Listed Adresses
-        field_type: text_area
+        field_type: text_box
         select_collection: ''
         tooltip: List of email adresses
         hint: ''
@@ -252,103 +252,7 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-service_actionators:
-  list_domains:
-    name: list_domains
-    label: List  Email domains
-    description: ''
-    log: false
-    return_type: json
-    return_file_name: 
-    params: 
-  add_domain:
-    name: add_domain
-    label: Add Domain
-    description: ''
-    log: true
-    return_type: json
-    return_file_name: 
-    params:
-      domain_name:
-        name: domain_name
-        value: ''
-        label: Domain Name
-        field_type: ''
-        select_collection: ''
-        tooltip: ''
-        hint: ''
-        placeholder: ''
-        comment: ''
-        regex_validator: ''
-        regex_invalid_message: ''
-        mandatory: true
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
-  del_domain:
-    name: del_domain
-    label: Remove  Domain
-    description: ''
-    log: true
-    return_type: json
-    return_file_name: 
-    params:
-      domain_name:
-        name: domain_name
-        value: ''
-        label: Domain Name
-        field_type: ''
-        select_collection: ''
-        tooltip: ''
-        hint: ''
-        placeholder: ''
-        comment: ''
-        regex_validator: ''
-        regex_invalid_message: ''
-        mandatory: true
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
-  show_queue:
-    name: show_queue
-    label: Show mail queue
-    description: ''
-    log: false
-    return_type: json
-    return_file_name: 
-    params: 
-  flush_queue:
-    name: flush_queue
-    label: Flush mail queue
-    description: ''
-    log: false
-    return_type: json
-    return_file_name: 
-    params: 
-  rm_email:
-    name: rm_email
-    label: Remove email from queue
-    description: ''
-    log: true
-    return_type: json
-    return_file_name: 
-    params:
-      queue_id:
-        name: queue_id
-        value: ''
-        label: Message ID
-        field_type: ''
-        select_collection: ''
-        tooltip: ''
-        hint: ''
-        placeholder: ''
-        comment: ''
-        regex_validator: ''
-        regex_invalid_message: ''
-        mandatory: true
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
+service_actionators: {}
 constants:
   backup_support:
     name: backup_support

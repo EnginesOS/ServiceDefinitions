@@ -11,7 +11,7 @@ major: 0
 minor: 0
 release_level: Alpha
 patch: 0
-service_container: volmgr
+service_container: volmanager
 service_handle_field: service_name
 dedicated: false
 persistent: true
@@ -26,6 +26,38 @@ target_environment_variables:
     environment_name: volume_name
     variable_name: service_name
 consumer_params:
+  user:
+    name: user
+    value: _Engines_Builder(data_uid)
+    label: user
+    field_type: text_field
+    select_collection: ''
+    tooltip: service tag name
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  group:
+    name: group
+    value: _Engines_Builder(data_gid)
+    label: group
+    field_type: text_field
+    select_collection: ''
+    tooltip: service tag name
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
   service_name:
     name: service_name
     value: _Engines_Builder(engine_name)
@@ -33,13 +65,13 @@ consumer_params:
     field_type: text_field
     select_collection: ''
     tooltip: service tag name
-    hint: ''
-    placeholder: ''
-    comment: ''
+    hint: " "
+    placeholder: " "
+    comment: " "
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
-    ask_at_build_time: true
+    ask_at_build_time: false
     build_time_only: false
     immutable: true
   volume_src:
@@ -90,38 +122,6 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: false
-  user:
-    name: user
-    value: _Engines_Builder(data_uid)
-    label: user
-    field_type: text_field
-    select_collection: ''
-    tooltip: service tag name
-    hint: ''
-    placeholder: ''
-    comment: ''
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: true
-    build_time_only: false
-    immutable: true
-  group:
-    name: group
-    value: _Engines_Builder(data_gid)
-    label: group
-    field_type: text_field
-    select_collection: ''
-    tooltip: service tag name
-    hint: ''
-    placeholder: ''
-    comment: ''
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: true
-    build_time_only: false
-    immutable: true
 type_consumer_params: {}
 configurators: {}
 service_actionators: {}

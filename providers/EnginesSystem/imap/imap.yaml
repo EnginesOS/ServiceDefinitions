@@ -20,15 +20,7 @@ target_environment_variables:
 consumer_params: {}
 type_consumer_params: {}
 configurators: {}
-service_actionators:
-  list_mailboxes:
-    name: list_mailboxes
-    label: List mail boxes
-    description: ''
-    log: false
-    return_type: json
-    return_file_name: 
-    params: 
+service_actionators: {}
 constants:
   backup_support:
     name: backup_support

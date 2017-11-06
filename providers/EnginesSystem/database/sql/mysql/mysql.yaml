@@ -11,7 +11,7 @@ major: 0
 minor: 0
 release_level: Alpha
 patch: 0
-service_container: mysqld
+service_container: mysql_server
 service_handle_field: database_name
 dedicated: false
 persistent: true
@@ -34,55 +34,10 @@ target_environment_variables:
   dbflavor:
     environment_name: dbflavor
     variable_name: db_flavor
+  rails_flavor:
+    environment_name: rails_flavor
+    variable_name: rails_flavor
 consumer_params:
-  db_flavor:
-    name: db_flavor
-    value: mysql2
-    label: DB db_flavor
-    field_type: text_field
-    select_collection: ''
-    tooltip: " "
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: true
-  db_password:
-    name: db_password
-    value: _Engines_System(random(10))
-    label: DB Password
-    field_type: password_with_confirmation
-    select_collection: ''
-    tooltip: ''
-    hint: ''
-    placeholder: ''
-    comment: ''
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: true
-    build_time_only: false
-    immutable: false
-  collation:
-    name: collation
-    value: utf8_general_ci
-    label: DB collation
-    field_type: select_single
-    select_collection: '["utf8_general_ci", "ascii","utf8mb4_general_ci"]'
-    tooltip: ''
-    hint: ''
-    placeholder: ''
-    comment: ''
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: true
-    build_time_only: false
-    immutable: true
   full_access:
     name: full_access
     value: 'false'
@@ -106,13 +61,13 @@ consumer_params:
     field_type: text_field
     select_collection: ''
     tooltip: service tag name
-    hint: ''
-    placeholder: ''
-    comment: ''
+    hint: " "
+    placeholder: " "
+    comment: " "
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
-    ask_at_build_time: true
+    ask_at_build_time: false
     build_time_only: false
     immutable: true
   database_host:
@@ -131,12 +86,12 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: true
-  db_username:
-    name: db_username
-    value: _Engines_Builder(engine_name)
-    label: DB User Name
-    field_type: text_field
-    select_collection: ''
+  collation:
+    name: collation
+    value: utf8_general_ci
+    label: DB collation
+    field_type: select_single
+    select_collection: '["utf8_general_ci", "ascii","utf8mb4_general_ci"]'
     tooltip: ''
     hint: ''
     placeholder: ''
@@ -144,7 +99,55 @@ consumer_params:
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
-    ask_at_build_time: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  db_flavor:
+    name: db_flavor
+    value: mysql2
+    label: DB db_flavor
+    field_type: text_field
+    select_collection: ''
+    tooltip: " "
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  db_password:
+    name: db_password
+    value: _Engines_System(random(10))
+    label: DB Password
+    field_type: password_with_confirmation
+    select_collection: ''
+    tooltip: " "
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  db_username:
+    name: db_username
+    value: _Engines_Builder(engine_name)
+    label: DB User Name
+    field_type: text_field
+    select_collection: ''
+    tooltip: " "
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
     build_time_only: false
     immutable: true
   database_name:
@@ -153,14 +156,30 @@ consumer_params:
     label: Database name
     field_type: text_field
     select_collection: ''
+    tooltip: " "
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  rails_flavor:
+    name: rails_flavor
+    value: mysql2
+    label: ''
+    field_type: ''
+    select_collection: ''
     tooltip: ''
     hint: ''
     placeholder: ''
     comment: ''
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: true
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: false
+    ask_at_build_time: false
     build_time_only: false
     immutable: true
 type_consumer_params: {}

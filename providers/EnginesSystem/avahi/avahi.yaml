@@ -37,44 +37,6 @@ consumer_params:
     build_time_only: false
     immutable: true
 type_consumer_params: {}
-configurators:
-  default_mdns_domain:
-    name: default_mdns_domain
-    label: default_mdns_domain
-    description: default_mdns_domain
-    no_save: false
-    params:
-      default_mdns_domain:
-        name: default_mdns_domain
-        value: engines.local
-        label: default_mdns_domain
-        field_type: ''
-        select_collection: ''
-        tooltip: ''
-        hint: ''
-        placeholder: ''
-        comment: ''
-        regex_validator: ''
-        regex_invalid_message: ''
-        mandatory: true
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
-service_actionators:
-  list_hosts:
-    name: list_hosts
-    label: List Hosts
-    description: ''
-    log: false
-    return_type: json
-    return_file_name: 
-    params: 
-  list_servces:
-    name: list_servces
-    label: List Services
-    description: ''
-    log: false
-    return_type: json
-    return_file_name: 
-    params: 
+configurators: {}
+service_actionators: {}
 constants: {}

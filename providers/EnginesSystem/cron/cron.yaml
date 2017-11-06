@@ -6,7 +6,7 @@ accepts:
 - ManagedService
 author: Engines
 title: Cron
-description: Scheduled tasks
+description: Scheduales tasks
 major: 0
 minor: 0
 release_level: Alpha
@@ -36,22 +36,6 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: false
-  cron_job:
-    name: cron_job
-    value: ''
-    label: Cron line
-    field_type: text_field
-    select_collection: ''
-    tooltip: ''
-    hint: the command
-    placeholder: ''
-    comment: ''
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: false
   title:
     name: title
     value: 
@@ -68,70 +52,23 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: false
-  when:
-    name: when
-    value: ''
-    label: Cron when specification
-    field_type: ''
+  cron_job:
+    name: cron_job
+    value: 
+    label: Cron line
+    field_type: text_field
     select_collection: ''
-    tooltip: ''
-    hint: ''
-    placeholder: ''
-    comment: ''
-    regex_validator: ''
-    regex_invalid_message: ''
+    tooltip: " "
+    hint: "* * * * * command"
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
     mandatory: true
     ask_at_build_time: false
     build_time_only: false
     immutable: false
-  notification_address:
-    name: notification_address
-    value: ''
-    label: Notication address
-    field_type: ''
-    select_collection: ''
-    tooltip: not present or 'default' for default, none for silent, log for log, email
-      address for email
-    hint: ''
-    placeholder: ''
-    comment: ''
-    regex_validator: ''
-    regex_invalid_message: ''
-    mandatory: false
-    ask_at_build_time: true
-    build_time_only: false
-    immutable: false
 type_consumer_params: {}
-configurators:
-  cron_default_email:
-    name: cron_default_email
-    label: Cron notification email address
-    description: ''
-    no_save: false
-    params:
-      cron_default_email:
-        name: cron_default_email
-        value: ''
-        label: Default notification mail  address
-        field_type: ''
-        select_collection: ''
-        tooltip: ''
-        hint: ''
-        placeholder: ''
-        comment: ''
-        regex_validator: ''
-        regex_invalid_message: ''
-        mandatory: false
-        ask_at_build_time: true
-        build_time_only: false
-        immutable: false
-service_actionators:
-  show_crontab:
-    name: show_crontab
-    label: Show Crontab
-    description: ''
-    log: false
-    return_type: json
-    return_file_name: 
-    params: 
+configurators: {}
+service_actionators: {}
 constants: {}

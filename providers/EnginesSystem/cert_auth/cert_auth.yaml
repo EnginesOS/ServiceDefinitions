@@ -18,6 +18,54 @@ attach_post_build: true
 attach_requires_restart: false
 target_environment_variables: 
 consumer_params:
+  cert_name:
+    name: cert_name
+    value: ''
+    label: cert name name
+    field_type: text_field
+    select_collection: ''
+    tooltip: Cert name usually domainname
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
+  domainname:
+    name: domainname
+    value: ''
+    label: domainname
+    field_type: text_field
+    select_collection: ''
+    tooltip: domainname or CN
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
+  person:
+    name: person
+    value: ''
+    label: person
+    field_type: text_field
+    select_collection: ''
+    tooltip: person/OU
+    hint: " "
+    placeholder: " "
+    comment: " "
+    regex_validator: ".*"
+    regex_invalid_message: wrong go back and try again
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
   country:
     name: country
     value: ''
@@ -82,86 +130,6 @@ consumer_params:
     ask_at_build_time: false
     build_time_only: false
     immutable: false
-  person:
-    name: person
-    value: ''
-    label: person
-    field_type: text_field
-    select_collection: ''
-    tooltip: person/OU
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: false
-  cert_name:
-    name: cert_name
-    value: ''
-    label: cert name name
-    field_type: text_field
-    select_collection: ''
-    tooltip: Cert name usually domainname
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: false
-  domainname:
-    name: domainname
-    value: ''
-    label: domainname
-    field_type: text_field
-    select_collection: ''
-    tooltip: domainname or CN
-    hint: ''
-    placeholder: ''
-    comment: ''
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: true
-    build_time_only: false
-    immutable: false
-  hostname:
-    name: hostname
-    value: ''
-    label: ''
-    field_type: ''
-    select_collection: ''
-    tooltip: ''
-    hint: ''
-    placeholder: ''
-    comment: ''
-    regex_validator: ''
-    regex_invalid_message: ''
-    mandatory: false
-    ask_at_build_time: true
-    build_time_only: false
-    immutable: false
-  alt_names:
-    name: alt_names
-    value: ''
-    label: Alterntive names
-    field_type: ''
-    select_collection: ''
-    tooltip: 'space seperated list of hostnames '
-    hint: ''
-    placeholder: ''
-    comment: ''
-    regex_validator: ''
-    regex_invalid_message: ''
-    mandatory: false
-    ask_at_build_time: true
-    build_time_only: false
-    immutable: true
 type_consumer_params: {}
 configurators:
   system_ca:
@@ -169,24 +137,8 @@ configurators:
     label: Root Certificate Authority
     description: Public Cert for key used to signed all Certificates issued by the
       engines host
-    no_save: true
+    no_save: 
     params:
-      cert_name:
-        name: cert_name
-        value: ''
-        label: cert name name
-        field_type: text_field
-        select_collection: ''
-        tooltip: Cert name usually domainname
-        hint: " "
-        placeholder: " "
-        comment: " "
-        regex_validator: ".*"
-        regex_invalid_message: wrong go back and try again
-        mandatory: true
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
       domainname:
         name: domainname
         value: ''
@@ -283,223 +235,23 @@ configurators:
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-service_actionators:
-  fetch_cert:
-    name: fetch_cert
-    label: fetch_cert
-    description: ''
-    log: false
-    return_type: plain_text
-    return_file_name: 
-    params:
       cert_name:
         name: cert_name
         value: ''
-        label: Certificate name
-        field_type: ''
-        select_collection: ''
-        tooltip: ''
-        hint: ''
-        placeholder: ''
-        comment: ''
-        regex_validator: ''
-        regex_invalid_message: ''
-        mandatory: true
-        ask_at_build_time: true
-        build_time_only: false
-        immutable: false
-      store:
-        name: store
-        value: ''
-        label: Store
-        field_type: ''
-        select_collection: ''
-        tooltip: imported|container type/name
-        hint: ''
-        placeholder: ''
-        comment: ''
-        regex_validator: ''
-        regex_invalid_message: ''
-        mandatory: true
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
-  import_cert:
-    name: import_cert
-    label: import_cert
-    description: ''
-    log: false
-    return_type: none
-    return_file_name: 
-    params:
-      certificate:
-        name: certificate
-        value: ''
-        label: ''
+        label: cert name name
         field_type: text_field
         select_collection: ''
-        tooltip: ''
-        hint: ''
-        placeholder: ''
-        comment: ''
-        regex_validator: ''
-        regex_invalid_message: ''
+        tooltip: Cert name usually domainname
+        hint: " "
+        placeholder: " "
+        comment: " "
+        regex_validator: ".*"
+        regex_invalid_message: wrong go back and try again
         mandatory: true
         ask_at_build_time: false
         build_time_only: false
         immutable: false
-      private_key:
-        name: private_key
-        value: ''
-        label: ''
-        field_type: text_field
-        select_collection: ''
-        tooltip: ''
-        hint: ''
-        placeholder: ''
-        comment: ''
-        regex_validator: ''
-        regex_invalid_message: ''
-        mandatory: true
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
-      target:
-        name: target
-        value: nginx
-        label: Target
-        field_type: ''
-        select_collection: ''
-        tooltip: smtp|email|imap|nginx|mysql|pgsql|ivpn
-        hint: ''
-        placeholder: ''
-        comment: ''
-        regex_validator: ''
-        regex_invalid_message: ''
-        mandatory: true
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
-  list_certs:
-    name: list_certs
-    label: list_certs
-    description: ''
-    log: false
-    return_type: json
-    return_file_name: 
-    params: 
-  remove_cert:
-    name: remove_cert
-    label: remove_cert
-    description: ''
-    log: false
-    return_type: none
-    return_file_name: 
-    params:
-      cert_name:
-        name: cert_name
-        value: ''
-        label: Certificate name
-        field_type: ''
-        select_collection: ''
-        tooltip: ''
-        hint: ''
-        placeholder: ''
-        comment: ''
-        regex_validator: ''
-        regex_invalid_message: ''
-        mandatory: true
-        ask_at_build_time: false
-        build_time_only: true
-        immutable: false
-      store:
-        name: store
-        value: ''
-        label: Store
-        field_type: ''
-        select_collection: ''
-        tooltip: imported|container_type/name
-        hint: ''
-        placeholder: ''
-        comment: ''
-        regex_validator: ''
-        regex_invalid_message: ''
-        mandatory: true
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
-  system_ca:
-    name: system_ca
-    label: system_ca
-    description: ''
-    log: false
-    return_type: file
-    return_file_name: enginesCA.crt
-    params: 
-  set_default:
-    name: set_default
-    label: Set Default
-    description: ''
-    log: false
-    return_type: plain_text
-    return_file_name: 
-    params:
-      target:
-        name: target
-        value: default
-        label: Target
-        field_type: ''
-        select_collection: ''
-        tooltip: default|enail|smtp|imap|ftp|nginx|ivpn||mysql|pgsql
-        hint: ''
-        placeholder: ''
-        comment: ''
-        regex_validator: ''
-        regex_invalid_message: ''
-        mandatory: true
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
-      cert_name:
-        name: cert_name
-        value: ''
-        label: Certificate name
-        field_type: ''
-        select_collection: ''
-        tooltip: ''
-        hint: ''
-        placeholder: ''
-        comment: ''
-        regex_validator: ''
-        regex_invalid_message: ''
-        mandatory: true
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
-      store:
-        name: store
-        value: ''
-        label: Store
-        field_type: ''
-        select_collection: ''
-        tooltip: imported/ ctype/cname/
-        hint: ''
-        placeholder: ''
-        comment: ''
-        regex_validator: ''
-        regex_invalid_message: ''
-        mandatory: true
-        ask_at_build_time: false
-        build_time_only: false
-        immutable: false
-  list_services_defaults:
-    name: list_services_defaults
-    label: List services default certificates
-    description: ''
-    log: false
-    return_type: json
-    return_file_name: 
-    params: 
+service_actionators: {}
 constants:
   backup_support:
     name: backup_support
