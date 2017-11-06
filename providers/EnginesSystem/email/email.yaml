@@ -265,8 +265,8 @@ service_actionators:
     name: add_domain
     label: Add Domain
     description: ''
-    log: false
-    return_type: plain_text
+    log: true
+    return_type: json
     return_file_name: 
     params:
       domain_name:
@@ -289,8 +289,8 @@ service_actionators:
     name: del_domain
     label: Remove  Domain
     description: ''
-    log: false
-    return_type: plain_text
+    log: true
+    return_type: json
     return_file_name: 
     params:
       domain_name:
