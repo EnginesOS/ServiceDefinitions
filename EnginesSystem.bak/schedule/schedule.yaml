@@ -1,68 +1,28 @@
 ---
-type_path: redis
+type_path: schedule
 publisher_namespace: EnginesSystem
 accepts:
 - ManagedEngine
+- ManagedService
 author: 
-title: redis
+title: Schedule
 description: ''
 major: 0
 minor: 0
 release_level: Alpha
 patch: 0
-service_container: redis
-service_handle_field: port
+service_container: cron
+service_handle_field: title
 dedicated: false
-persistent: false
+persistent: true
 immutable: false
-attach_post_build: false
+attach_post_build: true
 attach_requires_restart: false
-target_environment_variables:
-  redis_password:
-    environment_name: redis_password
-    variable_name: password
-  redis_port:
-    environment_name: redis_port
-    variable_name: port
-  redis_hostname:
-    environment_name: redis_hostname
-    variable_name: hostname
+target_environment_variables: 
 consumer_params:
-  password:
-    name: password
-    value: _Engines_System(random(16))
-    label: password
-    field_type: ''
-    select_collection: ''
-    tooltip: ''
-    hint: ''
-    placeholder: ''
-    comment: ''
-    regex_validator: ''
-    regex_invalid_message: ''
-    mandatory: false
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: true
-  port:
-    name: port
-    value: _Engines_System(service_resource(redis,next_port))
-    label: port
-    field_type: ''
-    select_collection: ''
-    tooltip: ''
-    hint: ''
-    placeholder: ''
-    comment: ''
-    regex_validator: ''
-    regex_invalid_message: ''
-    mandatory: false
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: true
-  hostname:
-    name: hostname
-    value: redis._Engines_System(internal_domain)
+  action_type:
+    name: action_type
+    value: schedule
     label: ''
     field_type: ''
     select_collection: ''
@@ -72,10 +32,58 @@ consumer_params:
     comment: ''
     regex_validator: ''
     regex_invalid_message: ''
-    mandatory: false
-    ask_at_build_time: false
+    mandatory: true
+    ask_at_build_time: true
     build_time_only: false
     immutable: true
+  cron_job:
+    name: cron_job
+    value: ''
+    label: Cron line
+    field_type: text_field
+    select_collection: ''
+    tooltip: ''
+    hint: 'the action  '
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
+  title:
+    name: title
+    value: ''
+    label: Title
+    field_type: text_field
+    select_collection: ''
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
+  when:
+    name: when
+    value: ''
+    label: Cron when specification
+    field_type: ''
+    select_collection: ''
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: true
+    ask_at_build_time: false
+    build_time_only: false
+    immutable: false
 type_consumer_params: {}
 configurators: {}
 service_actionators: {}

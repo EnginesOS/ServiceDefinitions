@@ -1,0 +1,62 @@
+---
+type_path: system
+publisher_namespace: EnginesSystem
+accepts: []
+author: 
+title: system
+description: ''
+major: 0
+minor: 0
+release_level: Release
+patch: 0
+service_container: system
+service_handle_field: ''
+dedicated: false
+persistent: false
+immutable: false
+attach_post_build: false
+attach_requires_restart: false
+target_environment_variables: 
+consumer_params: {}
+type_consumer_params: {}
+configurators:
+  hostname:
+    name: hostname
+    label: hostname
+    description: ''
+    no_save: false
+    params:
+      hostname:
+        name: hostname
+        value: ''
+        label: Host name
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: true
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      domain_name:
+        name: domain_name
+        value: ''
+        label: Domain Name
+        field_type: ''
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+service_actionators: {}
+constants: {}

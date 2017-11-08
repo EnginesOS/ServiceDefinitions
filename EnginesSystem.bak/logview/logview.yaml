@@ -1,38 +1,30 @@
 ---
-type_path: redis
+type_path: logview
 publisher_namespace: EnginesSystem
 accepts:
 - ManagedEngine
+- ManagedService
 author: 
-title: redis
+title: Log View
 description: ''
 major: 0
 minor: 0
 release_level: Alpha
 patch: 0
-service_container: redis
-service_handle_field: port
+service_container: logview
+service_handle_field: log_name
 dedicated: false
 persistent: false
 immutable: false
 attach_post_build: false
 attach_requires_restart: false
-target_environment_variables:
-  redis_password:
-    environment_name: redis_password
-    variable_name: password
-  redis_port:
-    environment_name: redis_port
-    variable_name: port
-  redis_hostname:
-    environment_name: redis_hostname
-    variable_name: hostname
+target_environment_variables: 
 consumer_params:
-  password:
-    name: password
-    value: _Engines_System(random(16))
-    label: password
-    field_type: ''
+  log_name:
+    name: log_name
+    value: ''
+    label: Log Name
+    field_type: text
     select_collection: ''
     tooltip: ''
     hint: ''
@@ -40,15 +32,15 @@ consumer_params:
     comment: ''
     regex_validator: ''
     regex_invalid_message: ''
-    mandatory: false
+    mandatory: true
     ask_at_build_time: false
     build_time_only: false
-    immutable: true
-  port:
-    name: port
-    value: _Engines_System(service_resource(redis,next_port))
-    label: port
-    field_type: ''
+    immutable: false
+  log_file_path:
+    name: log_file_path
+    value: ''
+    label: log_file_path
+    field_type: text
     select_collection: ''
     tooltip: ''
     hint: ''
@@ -56,26 +48,26 @@ consumer_params:
     comment: ''
     regex_validator: ''
     regex_invalid_message: ''
-    mandatory: false
+    mandatory: true
     ask_at_build_time: false
     build_time_only: false
-    immutable: true
-  hostname:
-    name: hostname
-    value: redis._Engines_System(internal_domain)
-    label: ''
-    field_type: ''
-    select_collection: ''
+    immutable: false
+  log_type:
+    name: log_type
+    value: raw
+    label: log type
+    field_type: collection
+    select_collection: nginx apache raw syslog nginx_error_log apache_error_log raw_dated
     tooltip: ''
-    hint: ''
+    hint: nginx apache raw syslog nginx_error_log apache_error_log raw_dated
     placeholder: ''
     comment: ''
     regex_validator: ''
     regex_invalid_message: ''
-    mandatory: false
+    mandatory: true
     ask_at_build_time: false
     build_time_only: false
-    immutable: true
+    immutable: false
 type_consumer_params: {}
 configurators: {}
 service_actionators: {}
