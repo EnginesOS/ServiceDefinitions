@@ -31,7 +31,7 @@ consumer_params:
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
-    ask_at_build_time: false
+    ask_at_build_time: true
     build_time_only: false
     immutable: true
   parent_engine:
@@ -47,7 +47,7 @@ consumer_params:
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
-    ask_at_build_time: false
+    ask_at_build_time: true
     build_time_only: false
     immutable: true
 type_consumer_params: {}
