@@ -10,7 +10,7 @@ minor: 0
 release_level: Alpha
 patch: 0
 service_container: auth
-service_handle_field: engine
+service_handle_field: parent_engine
 dedicated: false
 persistent: true
 immutable: false
@@ -18,70 +18,38 @@ attach_post_build: false
 attach_requires_restart: false
 target_environment_variables: 
 consumer_params:
-  service:
-    name: service
+  container_type:
+    name: container_type
     value: ''
-    label: service
+    label: ''
     field_type: text_field
     select_collection: ''
     tooltip: service
-    hint: " "
-    placeholder: " "
-    comment: " "
+    hint: ''
+    placeholder: ''
+    comment: ''
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
     ask_at_build_time: false
     build_time_only: false
-    immutable: false
-  command:
-    name: command
-    value: ''
-    label: command
-    field_type: text_field
-    select_collection: ''
-    tooltip: service
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: false
-  pubkey:
-    name: pubkey
-    value: _Engines_System(pubkey)
-    label: pubkey
-    field_type: text_field
-    select_collection: ''
-    tooltip: pubkey
-    hint: " "
-    placeholder: " "
-    comment: " "
-    regex_validator: ".*"
-    regex_invalid_message: wrong go back and try again
-    mandatory: true
-    ask_at_build_time: false
-    build_time_only: false
-    immutable: false
-  engine:
-    name: engine
+    immutable: true
+  parent_engine:
+    name: parent_engine
     value: _Builder(engine_name)
-    label: User name
+    label: parent_engine
     field_type: text_field
     select_collection: ''
     tooltip: User name
-    hint: " "
-    placeholder: " "
-    comment: " "
+    hint: ''
+    placeholder: ''
+    comment: ''
     regex_validator: ".*"
     regex_invalid_message: wrong go back and try again
     mandatory: true
     ask_at_build_time: false
     build_time_only: false
-    immutable: false
+    immutable: true
 type_consumer_params: {}
 configurators: {}
 service_actionators: {}
