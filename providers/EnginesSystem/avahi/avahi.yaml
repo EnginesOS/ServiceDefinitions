@@ -22,18 +22,34 @@ target_environment_variables:
 consumer_params:
   hostname:
     name: hostname
-    value: " "
+    value: _Engines_Builder(engine_name)
     label: hostname
     field_type: text_field
     select_collection: ''
-    tooltip: " "
+    tooltip: ''
     hint: hostname
-    placeholder: " "
-    comment: " "
+    placeholder: ''
+    comment: ''
     regex_validator: ".*"
-    regex_invalid_message: 
+    regex_invalid_message: ''
     mandatory: true
     ask_at_build_time: false
+    build_time_only: false
+    immutable: true
+  name:
+    name: name
+    value: _Engines_Builder(engine_name)
+    label: ''
+    field_type: ''
+    select_collection: ''
+    tooltip: ''
+    hint: ''
+    placeholder: ''
+    comment: ''
+    regex_validator: ''
+    regex_invalid_message: ''
+    mandatory: true
+    ask_at_build_time: true
     build_time_only: false
     immutable: true
 type_consumer_params: {}
